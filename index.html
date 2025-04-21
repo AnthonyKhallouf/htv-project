@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HTV Card Generator</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
   <style>
     body {
       background-color: black;
@@ -14,6 +14,7 @@
       text-align: center;
       padding: 20px;
     }
+
     #htv-generator {
       max-width: 400px;
       margin: 0 auto;
@@ -21,6 +22,7 @@
       flex-direction: column;
       gap: 14px;
     }
+
     .donate-button {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
       color: white;
@@ -35,21 +37,19 @@
       margin: 0 auto;
       animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 4px yellow; }
       50% { box-shadow: 0 0 12px yellow; }
       100% { box-shadow: 0 0 4px yellow; }
     }
-    .countdown-timer {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
-      color: red;
-    }
+
     h2 {
       font-size: 22px;
       font-weight: bold;
       margin: 0;
     }
+
     .shine-button,
     select {
       background: linear-gradient(to bottom, #999 0%, #1a1a1a 100%);
@@ -69,20 +69,24 @@
       width: 100%;
       box-shadow: 0 0 8px red;
     }
+
     .shine-button.aec-button {
       padding-left: 6px;
       padding-right: 6px;
       box-shadow: 0 0 4px red;
     }
+
     .shine-button:hover {
       background: linear-gradient(to bottom, #bbb 0%, #222 100%);
       cursor: pointer;
     }
+
     .share-row {
       display: flex;
       justify-content: center;
       gap: 8px;
     }
+
     .share-btn {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
       border: 2px solid red;
@@ -98,17 +102,20 @@
       gap: 6px;
       box-shadow: 0 0 4px red;
     }
+
     .share-btn img {
       width: 18px;
       height: 18px;
     }
-    p { margin: 0; }
+
+    p {
+      margin: 0;
+    }
   </style>
 </head>
 <body>
   <div id="htv-generator">
     <div class="donate-button">❤️ Donate to support @ausvstheagenda</div>
-    <div class="countdown-timer" id="countdown-timer">⏳ Loading...</div>
     <h2>How to Vote in the 2025 Federal Election</h2>
 
     <p>Click below to find your electorate using the AEC website:</p>
@@ -145,41 +152,7 @@
       html2pdf().from(element).save("HTV-Card.pdf");
     }
 
-    const countdown = document.getElementById("countdown-timer");
-  const targetDate = new Date("2025-05-03T00:00:00+10:00"); // ✅ AEST at midnight
-
-  let confettiFired = false;
-
-  function updateCountdown() {
-    const now = new Date();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      countdown.textContent = "🗳️ Election Day is here!";
-
-      if (!confettiFired) {
-        confettiFired = true;
-        confetti({
-          particleCount: 200,
-          spread: 90,
-          origin: { y: 0.6 }
-        });
-      }
-
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    countdown.textContent = `⏳ ${days}d ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  }
-
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-
+    // Load electorates into dropdown
     fetch("electorate-to-state.json")
       .then(response => response.json())
       .then(data => {
