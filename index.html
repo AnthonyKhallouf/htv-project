@@ -144,7 +144,7 @@
       <option value="">-- Select your electorate --</option>
     </select>
 
-    <button class="shine-button" onclick="downloadPDF()">📩 View & Download HTV Card (PDF)</button>
+    <button class="shine-button" onclick="downloadPDF()">📥 View & Download HTV Card (PDF)</button>
 
     <div class="share-row">
       <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share</button>
@@ -156,13 +156,13 @@
   <script>
     const houseURL = 'https://anthonykhallouf.github.io/htv-preferences/house-preferences-2025.json';
     const senateURL = 'https://anthonykhallouf.github.io/htv-preferences/senate-preferences-2025.json';
+
     let houseData = {}, senateData = {};
 
     async function loadPreferences() {
       try {
         houseData = await (await fetch(houseURL)).json();
         senateData = await (await fetch(senateURL)).json();
-        console.log("✅ Loaded data successfully");
 
         const dropdown = document.getElementById('electorate-select');
         const sortedElectorates = Object.keys(houseData).sort();
@@ -173,13 +173,15 @@
           opt.textContent = electorate;
           dropdown.appendChild(opt);
         });
-      } catch (error) {
-        console.error("❌ Failed to load preference data:", error);
+
+        console.log("✅ Loaded data successfully");
+      } catch (err) {
+        console.error("❌ Failed to load data:", err);
         alert("Failed to load How to Vote data. Please refresh or try again later.");
       }
     }
 
-    async function downloadPDF() {
+    function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) return alert("Please select an electorate.");
 
@@ -209,14 +211,16 @@
       `;
       document.body.appendChild(pdfContent);
 
-      await html2pdf().from(pdfContent).set({
+      html2pdf().from(pdfContent).set({
         margin: 10,
         filename: `${electorate}-HTV-2025.pdf`,
         html2canvas: { scale: 2 },
         jsPDF: { format: 'a4' }
       }).save();
 
-      document.body.removeChild(pdfContent);
+      setTimeout(() => {
+        document.body.removeChild(pdfContent);
+      }, 2000);
     }
 
     function startCountdown() {
@@ -245,10 +249,8 @@
       updateCountdown();
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      loadPreferences();
-      startCountdown();
-    });
+    loadPreferences();
+    startCountdown();
   </script>
 </body>
 </html>
