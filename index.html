@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTV Card Generator</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <style>
     body {
@@ -42,6 +43,14 @@
       0% { box-shadow: 0 0 4px yellow; }
       50% { box-shadow: 0 0 12px yellow; }
       100% { box-shadow: 0 0 4px yellow; }
+    }
+
+    .countdown-timer {
+      font-size: 14px;
+      color: red;
+      font-family: monospace;
+      margin-top: 4px;
+      margin-bottom: 4px;
     }
 
     h2 { font-size: 22px; font-weight: bold; margin: 0; }
@@ -94,7 +103,12 @@
 </head>
 <body>
   <div id="htv-generator">
-    <div class="donate-button">❤️ Donate to support @ausvstheagenda</div>
+    <a href="https://australiansvstheagenda.com.au/donate" target="_blank">
+      <div class="donate-button">❤️ Donate to support @ausvstheagenda</div>
+    </a>
+
+    <div id="countdown" class="countdown-timer">⏳ Loading countdown...</div>
+
     <h2>How to Vote in the 2025 Federal Election</h2>
 
     <p>Click below to find your electorate using the AEC website:</p>
@@ -162,7 +176,34 @@
       });
     }
 
+    function startCountdown() {
+      const countdownEl = document.getElementById("countdown");
+      const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 0, 0)); // May 3, 12:00am AEST = May 2, 2:00pm UTC
+      let hasCelebrated = false;
+
+      function update() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0 && !hasCelebrated) {
+          countdownEl.textContent = "🗳️ Election Day is here!";
+          hasCelebrated = true;
+          confetti({ particleCount: 150, spread: 90, origin: { y: 0.6 } });
+          return;
+        }
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        countdownEl.textContent = `⏳ ${hours}h ${minutes}m ${seconds}s until Election Day`;
+      }
+
+      update();
+      setInterval(update, 1000);
+    }
+
     loadPreferences();
+    startCountdown();
   </script>
 </body>
 </html>
