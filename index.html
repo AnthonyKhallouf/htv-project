@@ -192,14 +192,19 @@
       const state = houseInfo.state;
       if (!state) return alert(`No state listed for ${electorate}`);
 
-      const senatePrefs = senateData.filter(c => c.State === state);
-if (!senatePrefs.length) return alert(`Senate preferences not found for state: ${state}`);
+      const senatePrefs = senateData[state];
+      if (!senatePrefs || !Array.isArray(senatePrefs)) {
+        return alert(`Senate preferences not found for state: ${state}`);
+      }
 
       const pdfContent = document.createElement('div');
-      pdfContent.style.position = 'static'; // this will show it on the page
+      pdfContent.style.position = 'fixed';
+      pdfContent.style.top = '-10000px';
+      pdfContent.style.left = '-10000px';
       pdfContent.style.background = 'white';
       pdfContent.style.color = 'black';
       pdfContent.style.padding = '20px';
+
       pdfContent.innerHTML = `
         <h2>How to Vote in ${electorate}</h2>
         <h3>House Preferences</h3>
@@ -207,9 +212,9 @@ if (!senatePrefs.length) return alert(`Senate preferences not found for state: $
         <h3>Senate Preferences (${state})</h3>
         <ol>${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}</ol>
       `;
+
       document.body.appendChild(pdfContent);
 
-      // Ensure all images (if any) are loaded before generating PDF
       const images = pdfContent.querySelectorAll("img");
       const imagePromises = Array.from(images).map(img => new Promise((resolve, reject) => {
         if (img.complete) resolve();
