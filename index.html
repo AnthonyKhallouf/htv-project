@@ -196,9 +196,7 @@
 if (!senatePrefs.length) return alert(`Senate preferences not found for state: ${state}`);
 
       const pdfContent = document.createElement('div');
-      pdfContent.style.position = 'fixed';
-      pdfContent.style.top = '-10000px';
-      pdfContent.style.left = '-10000px';
+      pdfContent.style.position = 'static'; // this will show it on the page
       pdfContent.style.background = 'white';
       pdfContent.style.color = 'black';
       pdfContent.style.padding = '20px';
