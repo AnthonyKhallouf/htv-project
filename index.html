@@ -173,16 +173,20 @@
           <h2 style="color:black;">How to Vote in ${electorate}</h2>
           <h3 style="color:black;">House Preferences</h3>
           <ol style="color:black;">
-            ${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}
+            ${housePrefs.map(c => `<li>${c.Surname || c.surname || ''}, ${c.Name || c.name || ''} (${c.Party || c.party || ''})</li>`).join('')}
           </ol>
           <h3 style="color:black;">Senate Preferences (${state})</h3>
           <ol style="color:black;">
-            ${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}
+            ${senatePrefs.map(c => `<li>Group ${c.Group || c.group}: ${c.Party || c.party} (Preference ${c.Preference || c.preference})</li>`).join('')}
           </ol>
         </div>
       `;
       document.body.appendChild(pdfContent);
 
+      // Force layout reflow
+      void pdfContent.offsetHeight;
+
+      // Wait for DOM to fully render
       setTimeout(() => {
         html2pdf().from(pdfContent).set({
           margin: 10,
