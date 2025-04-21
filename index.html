@@ -136,16 +136,30 @@
 
     async function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
-      if (!electorate) { alert('Select an electorate first.'); return; }
+      if (!electorate) {
+        alert('Select an electorate first.');
+        return;
+      }
 
-      const housePrefs = houseData[electorate].Preferences;
-      const state = houseData[electorate].State;
+      const housePrefs = houseData[electorate].preferences;
+      const state = houseData[electorate].state;
       const senatePrefs = senateData[state];
 
       const pdfContent = document.createElement('div');
-      pdfContent.innerHTML = `<h2>${electorate}</h2><h3>House Preferences</h3><ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol><h3>Senate Preferences (${state})</h3><ol>${senatePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>`;
+      pdfContent.innerHTML = `
+        <h2>${electorate}</h2>
+        <h3>House Preferences</h3>
+        <ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
+        <h3>Senate Preferences (${state})</h3>
+        <ol>${senatePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
+      `;
 
-      html2pdf(pdfContent, { margin: 10, filename: `${electorate}-HTV-2025.pdf`, html2canvas: { scale: 2 }, jsPDF: { format: 'a4' }});
+      html2pdf(pdfContent, {
+        margin: 10,
+        filename: `${electorate}-HTV-2025.pdf`,
+        html2canvas: { scale: 2 },
+        jsPDF: { format: 'a4' }
+      });
     }
 
     loadPreferences();
