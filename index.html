@@ -154,7 +154,7 @@
   </div>
 
   <script>
-    const houseURL = 'https://anthonykhallouf.github.io/htv-preferences/house-preferences-2025.json';
+    const houseURL = 'https://anthonykhallouf.github.io/htv-preferences/house-preferences-2025-final.json';
     const senateURL = 'https://anthonykhallouf.github.io/htv-preferences/senate-preferences-2025.json';
     let houseData, senateData;
 
@@ -175,30 +175,17 @@
 
     async function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
-      if (!electorate) {
-        alert('Select an electorate first.');
-        return;
-      }
+      if (!electorate) return alert("Please select an electorate.");
 
       const houseInfo = houseData[electorate];
-      if (!houseInfo) {
-        alert(`House data not found for ${electorate}`);
-        return;
-      }
+      if (!houseInfo) return alert(`House data not found for ${electorate}`);
 
       const housePrefs = houseInfo.preferences;
       const state = houseInfo.state;
-
-      if (!state) {
-        alert(`No state listed for ${electorate}`);
-        return;
-      }
+      if (!state) return alert(`No state listed for ${electorate}`);
 
       const senatePrefs = senateData[state];
-      if (!senatePrefs || !Array.isArray(senatePrefs)) {
-        alert(`Senate preferences not found for state: ${state}`);
-        return;
-      }
+      if (!senatePrefs || !Array.isArray(senatePrefs)) return alert(`Senate preferences not found for state: ${state}`);
 
       const pdfContent = document.createElement('div');
       pdfContent.style.position = 'fixed';
@@ -236,11 +223,7 @@
 
         if (diff <= 0) {
           countdownElement.textContent = "🗳️ Election Day is here!";
-          confetti({
-            particleCount: 150,
-            spread: 100,
-            origin: { y: 0.6 }
-          });
+          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
           return;
         }
 
