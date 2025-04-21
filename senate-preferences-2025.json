@@ -1,500 +1,433 @@
-[
-  {
-    "State":"NSW",
-    "Group":"C",
-    "Party":"Australia's Voice",
-    "Preference":11
-  },
-  {
-    "State":"NSW",
-    "Group":"D",
-    "Party":"FUSION | Planet Rescue | Whistleblower Protection | Innovation",
-    "Preference":10
-  },
-  {
-    "State":"NSW",
-    "Group":"E",
-    "Party":"Family First",
-    "Preference":3
-  },
-  {
-    "State":"NSW",
-    "Group":"F",
-    "Party":"Pauline Hanson's One Nation",
-    "Preference":2
-  },
-  {
-    "State":"NSW",
-    "Group":"H",
-    "Party":"Australian Christians",
-    "Preference":4
-  },
-  {
-    "State":"NSW",
-    "Group":"I",
-    "Party":"Libertarian \/ HEART \/ Gerard Rennick People First",
-    "Preference":1
-  },
-  {
-    "State":"NSW",
-    "Group":"J",
-    "Party":"Legalise Cannabis Party",
-    "Preference":8
-  },
-  {
-    "State":"NSW",
-    "Group":"M",
-    "Party":"Trumpet of Patriots",
-    "Preference":5
-  },
-  {
-    "State":"NSW",
-    "Group":"N",
-    "Party":"Liberal & Nationals",
-    "Preference":7
-  },
-  {
-    "State":"NSW",
-    "Group":"O",
-    "Party":"Jacqui Lambie Network",
-    "Preference":9
-  },
-  {
-    "State":"NSW",
-    "Group":"P",
-    "Party":"Citizens Party",
-    "Preference":6
-  },
-  {
-    "State":"NSW",
-    "Group":"R",
-    "Party":"The Greens",
-    "Preference":12
-  },
-  {
-    "State":"TAS",
-    "Group":"B",
-    "Party":"Liberal",
-    "Preference":5
-  },
-  {
-    "State":"TAS",
-    "Group":"C",
-    "Party":"Trumpet of Patriots",
-    "Preference":3
-  },
-  {
-    "State":"TAS",
-    "Group":"D",
-    "Party":"Legalise Cannabis Party",
-    "Preference":7
-  },
-  {
-    "State":"TAS",
-    "Group":"E",
-    "Party":"Animal Justice Party",
-    "Preference":9
-  },
-  {
-    "State":"TAS",
-    "Group":"F",
-    "Party":"The Greens",
-    "Preference":10
-  },
-  {
-    "State":"TAS",
-    "Group":"G",
-    "Party":"Jacqui Lambie Network",
-    "Preference":8
-  },
-  {
-    "State":"TAS",
-    "Group":"H",
-    "Party":"Libertarian",
-    "Preference":2
-  },
-  {
-    "State":"TAS",
-    "Group":"I",
-    "Party":"Pauline Hanson's One Nation",
-    "Preference":1
-  },
-  {
-    "State":"TAS",
-    "Group":"J",
-    "Party":"Citizens Party",
-    "Preference":4
-  },
-  {
-    "State":"TAS",
-    "Group":"L",
-    "Party":"Shooters, Fishers and Farmers Party",
-    "Preference":6
-  },
-  {
-    "State":"VIC",
-    "Group":"A",
-    "Party":"Liberal\/The Nationals",
-    "Preference":8
-  },
-  {
-    "State":"VIC",
-    "Group":"C",
-    "Party":"Animal Justice Party",
-    "Preference":11
-  },
-  {
-    "State":"VIC",
-    "Group":"D",
-    "Party":"Indigenous - Aboriginal Party of Australia",
-    "Preference":10
-  },
-  {
-    "State":"VIC",
-    "Group":"H",
-    "Party":"Trumpet of Patriots",
-    "Preference":7
-  },
-  {
-    "State":"VIC",
-    "Group":"J",
-    "Party":"Family First",
-    "Preference":4
-  },
-  {
-    "State":"VIC",
-    "Group":"K",
-    "Party":"Pauline Hanson's One Nation",
-    "Preference":1
-  },
-  {
-    "State":"VIC",
-    "Group":"L",
-    "Party":"Australian Democrats",
-    "Preference":5
-  },
-  {
-    "State":"VIC",
-    "Group":"O",
-    "Party":"Gerard Rennick People First - HEART",
-    "Preference":3
-  },
-  {
-    "State":"VIC",
-    "Group":"P",
-    "Party":"Libertarian",
-    "Preference":2
-  },
-  {
-    "State":"VIC",
-    "Group":"Q",
-    "Party":"The Greens",
-    "Preference":12
-  },
-  {
-    "State":"VIC",
-    "Group":"R",
-    "Party":"Citizens Party",
-    "Preference":6
-  },
-  {
-    "State":"VIC",
-    "Group":"S",
-    "Party":"Shooters, Fishers and Farmers Party",
-    "Preference":9
-  },
-  {
-    "State":"QLD",
-    "Group":"B",
-    "Party":"Trumpet of  Patriots",
-    "Preference":7
-  },
-  {
-    "State":"QLD",
-    "Group":"F",
-    "Party":"Jacqui Lambie Network",
-    "Preference":10
-  },
-  {
-    "State":"QLD",
-    "Group":"G",
-    "Party":"Gerard Rennick People First - Katter's Australia Party",
-    "Preference":1
-  },
-  {
-    "State":"QLD",
-    "Group":"H",
-    "Party":"Australian Democrats",
-    "Preference":8
-  },
-  {
-    "State":"QLD",
-    "Group":"I",
-    "Party":"LNP",
-    "Preference":9
-  },
-  {
-    "State":"QLD",
-    "Group":"K",
-    "Party":"Great Australian Party & HEART party",
-    "Preference":4
-  },
-  {
-    "State":"QLD",
-    "Group":"L",
-    "Party":"Australian Democrats",
-    "Preference":6
-  },
-  {
-    "State":"QLD",
-    "Group":"M",
-    "Party":"Animal Justice Party",
-    "Preference":11
-  },
-  {
-    "State":"QLD",
-    "Group":"N",
-    "Party":"Family First",
-    "Preference":5
-  },
-  {
-    "State":"QLD",
-    "Group":"O",
-    "Party":"Legalise Cannabis Party",
-    "Preference":9
-  },
-  {
-    "State":"QLD",
-    "Group":"P",
-    "Party":"The Greens",
-    "Preference":12
-  },
-  {
-    "State":"QLD",
-    "Group":"Q",
-    "Party":"Pauline Hanson's One Nation",
-    "Preference":2
-  },
-  {
-    "State":"QLD",
-    "Group":"S",
-    "Party":"Libertarians",
-    "Preference":3
-  },
-  {
-    "State":"WA",
-    "Group":"A",
-    "Party":"The Great Australian Party",
-    "Preference":4
-  },
-  {
-    "State":"WA",
-    "Group":"B",
-    "Party":"Australian Christians",
-    "Preference":5
-  },
-  {
-    "State":"WA",
-    "Group":"C",
-    "Party":"Citizens Party",
-    "Preference":6
-  },
-  {
-    "State":"WA",
-    "Group":"D",
-    "Party":"Trumpet of Patriots",
-    "Preference":8
-  },
-  {
-    "State":"WA",
-    "Group":"F",
-    "Party":"Australian Democrats",
-    "Preference":9
-  },
-  {
-    "State":"WA",
-    "Group":"G",
-    "Party":"Libertarian",
-    "Preference":3
-  },
-  {
-    "State":"WA",
-    "Group":"H",
-    "Party":"Gerard Rennick People First",
-    "Preference":1
-  },
-  {
-    "State":"WA",
-    "Group":"I",
-    "Party":"The Greens (WA) inc",
-    "Preference":12
-  },
-  {
-    "State":"WA",
-    "Group":"M",
-    "Party":"Pauline Hanson's One Nation",
-    "Preference":2
-  },
-  {
-    "State":"WA",
-    "Group":"N",
-    "Party":"Legalise Cannabis Party",
-    "Preference":11
-  },
-  {
-    "State":"WA",
-    "Group":"Q",
-    "Party":"Liberal",
-    "Preference":10
-  },
-  {
-    "State":"WA",
-    "Group":"R",
-    "Party":"The Nationals",
-    "Preference":7
-  },
-  {
-    "State":"SA",
-    "Group":"A",
-    "Party":"Libertarian",
-    "Preference":2
-  },
-  {
-    "State":"SA",
-    "Group":"C",
-    "Party":"Liberal",
-    "Preference":6
-  },
-  {
-    "State":"SA",
-    "Group":"E",
-    "Party":"Animal Justice Party",
-    "Preference":11
-  },
-  {
-    "State":"SA",
-    "Group":"F",
-    "Party":"Jacqui Lambie Network",
-    "Preference":10
-  },
-  {
-    "State":"SA",
-    "Group":"G",
-    "Party":"Trumpet of Patriots",
-    "Preference":8
-  },
-  {
-    "State":"SA",
-    "Group":"H",
-    "Party":"National Party",
-    "Preference":7
-  },
-  {
-    "State":"SA",
-    "Group":"J",
-    "Party":"Gerard Rennick People First",
-    "Preference":3
-  },
-  {
-    "State":"SA",
-    "Group":"K",
-    "Party":"Legalise Cannabis",
-    "Preference":9
-  },
-  {
-    "State":"SA",
-    "Group":"L",
-    "Party":"Citizens Party",
-    "Preference":5
-  },
-  {
-    "State":"SA",
-    "Group":"M",
-    "Party":"Family First",
-    "Preference":4
-  },
-  {
-    "State":"SA",
-    "Group":"N",
-    "Party":"The Greens",
-    "Preference":12
-  },
-  {
-    "State":"SA",
-    "Group":"P",
-    "Party":"Pauline Hanson's One Nation",
-    "Preference":1
-  },
-  {
-    "State":"NT",
-    "Group":"B",
-    "Party":"Legalise Cannabis Party",
-    "Preference":5
-  },
-  {
-    "State":"NT",
-    "Group":"D",
-    "Party":"NT CLP",
-    "Preference":4
-  },
-  {
-    "State":"NT",
-    "Group":"E",
-    "Party":"Australian Greens",
-    "Preference":6
-  },
-  {
-    "State":"NT",
-    "Group":"F",
-    "Party":"Pauline Hanson's One Nation",
-    "Preference":2
-  },
-  {
-    "State":"NT",
-    "Group":"G",
-    "Party":"Citizens Party",
-    "Preference":3
-  },
-  {
-    "State":"NT",
-    "Group":"H",
-    "Party":"Libertarian",
-    "Preference":1
-  },
-  {
-    "State":"ACT",
-    "Group":"B",
-    "Party":"David Pocock",
-    "Preference":4
-  },
-  {
-    "State":"ACT",
-    "Group":"C",
-    "Party":"Animal Justice Party",
-    "Preference":5
-  },
-  {
-    "State":"ACT",
-    "Group":"E",
-    "Party":"Liberal",
-    "Preference":3
-  },
-  {
-    "State":"ACT",
-    "Group":"F",
-    "Party":"HEART  Party",
-    "Preference":2
-  },
-  {
-    "State":"ACT",
-    "Group":"G",
-    "Party":"Libertarian",
-    "Preference":1
-  },
-  {
-    "State":"ACT",
-    "Group":"H",
-    "Party":"Australian Greens",
-    "Preference":6
-  }
-]
+{
+  "NSW": [
+    {
+      "Group": "C",
+      "Party": "Australia's Voice",
+      "Preference": 11
+    },
+    {
+      "Group": "D",
+      "Party": "FUSION | Planet Rescue | Whistleblower Protection | Innovation",
+      "Preference": 10
+    },
+    {
+      "Group": "E",
+      "Party": "Family First",
+      "Preference": 3
+    },
+    {
+      "Group": "F",
+      "Party": "Pauline Hanson's One Nation",
+      "Preference": 2
+    },
+    {
+      "Group": "H",
+      "Party": "Australian Christians",
+      "Preference": 4
+    },
+    {
+      "Group": "I",
+      "Party": "Libertarian / HEART / Gerard Rennick People First",
+      "Preference": 1
+    },
+    {
+      "Group": "J",
+      "Party": "Legalise Cannabis Party",
+      "Preference": 8
+    },
+    {
+      "Group": "M",
+      "Party": "Trumpet of Patriots",
+      "Preference": 5
+    },
+    {
+      "Group": "N",
+      "Party": "Liberal & Nationals",
+      "Preference": 7
+    },
+    {
+      "Group": "O",
+      "Party": "Jacqui Lambie Network",
+      "Preference": 9
+    },
+    {
+      "Group": "P",
+      "Party": "Citizens Party",
+      "Preference": 6
+    },
+    {
+      "Group": "R",
+      "Party": "The Greens",
+      "Preference": 12
+    }
+  ],
+  "TAS": [
+    {
+      "Group": "B",
+      "Party": "Liberal",
+      "Preference": 5
+    },
+    {
+      "Group": "C",
+      "Party": "Trumpet of Patriots",
+      "Preference": 3
+    },
+    {
+      "Group": "D",
+      "Party": "Legalise Cannabis Party",
+      "Preference": 7
+    },
+    {
+      "Group": "E",
+      "Party": "Animal Justice Party",
+      "Preference": 9
+    },
+    {
+      "Group": "F",
+      "Party": "The Greens",
+      "Preference": 10
+    },
+    {
+      "Group": "G",
+      "Party": "Jacqui Lambie Network",
+      "Preference": 8
+    },
+    {
+      "Group": "H",
+      "Party": "Libertarian",
+      "Preference": 2
+    },
+    {
+      "Group": "I",
+      "Party": "Pauline Hanson's One Nation",
+      "Preference": 1
+    },
+    {
+      "Group": "J",
+      "Party": "Citizens Party",
+      "Preference": 4
+    },
+    {
+      "Group": "L",
+      "Party": "Shooters, Fishers and Farmers Party",
+      "Preference": 6
+    }
+  ],
+  "VIC": [
+    {
+      "Group": "A",
+      "Party": "Liberal/The Nationals",
+      "Preference": 8
+    },
+    {
+      "Group": "C",
+      "Party": "Animal Justice Party",
+      "Preference": 11
+    },
+    {
+      "Group": "D",
+      "Party": "Indigenous - Aboriginal Party of Australia",
+      "Preference": 10
+    },
+    {
+      "Group": "H",
+      "Party": "Trumpet of Patriots",
+      "Preference": 7
+    },
+    {
+      "Group": "J",
+      "Party": "Family First",
+      "Preference": 4
+    },
+    {
+      "Group": "K",
+      "Party": "Pauline Hanson's One Nation",
+      "Preference": 1
+    },
+    {
+      "Group": "L",
+      "Party": "Australian Democrats",
+      "Preference": 5
+    },
+    {
+      "Group": "O",
+      "Party": "Gerard Rennick People First - HEART",
+      "Preference": 3
+    },
+    {
+      "Group": "P",
+      "Party": "Libertarian",
+      "Preference": 2
+    },
+    {
+      "Group": "Q",
+      "Party": "The Greens",
+      "Preference": 12
+    },
+    {
+      "Group": "R",
+      "Party": "Citizens Party",
+      "Preference": 6
+    },
+    {
+      "Group": "S",
+      "Party": "Shooters, Fishers and Farmers Party",
+      "Preference": 9
+    }
+  ],
+  "QLD": [
+    {
+      "Group": "B",
+      "Party": "Trumpet of  Patriots",
+      "Preference": 7
+    },
+    {
+      "Group": "F",
+      "Party": "Jacqui Lambie Network",
+      "Preference": 10
+    },
+    {
+      "Group": "G",
+      "Party": "Gerard Rennick People First - Katter's Australia Party",
+      "Preference": 1
+    },
+    {
+      "Group": "H",
+      "Party": "Australian Democrats",
+      "Preference": 8
+    },
+    {
+      "Group": "I",
+      "Party": "LNP",
+      "Preference": 9
+    },
+    {
+      "Group": "K",
+      "Party": "Great Australian Party & HEART party",
+      "Preference": 4
+    },
+    {
+      "Group": "L",
+      "Party": "Australian Democrats",
+      "Preference": 6
+    },
+    {
+      "Group": "M",
+      "Party": "Animal Justice Party",
+      "Preference": 11
+    },
+    {
+      "Group": "N",
+      "Party": "Family First",
+      "Preference": 5
+    },
+    {
+      "Group": "O",
+      "Party": "Legalise Cannabis Party",
+      "Preference": 9
+    },
+    {
+      "Group": "P",
+      "Party": "The Greens",
+      "Preference": 12
+    },
+    {
+      "Group": "Q",
+      "Party": "Pauline Hanson's One Nation",
+      "Preference": 2
+    },
+    {
+      "Group": "S",
+      "Party": "Libertarians",
+      "Preference": 3
+    }
+  ],
+  "WA": [
+    {
+      "Group": "A",
+      "Party": "The Great Australian Party",
+      "Preference": 4
+    },
+    {
+      "Group": "B",
+      "Party": "Australian Christians",
+      "Preference": 5
+    },
+    {
+      "Group": "C",
+      "Party": "Citizens Party",
+      "Preference": 6
+    },
+    {
+      "Group": "D",
+      "Party": "Trumpet of Patriots",
+      "Preference": 8
+    },
+    {
+      "Group": "F",
+      "Party": "Australian Democrats",
+      "Preference": 9
+    },
+    {
+      "Group": "G",
+      "Party": "Libertarian",
+      "Preference": 3
+    },
+    {
+      "Group": "H",
+      "Party": "Gerard Rennick People First",
+      "Preference": 1
+    },
+    {
+      "Group": "I",
+      "Party": "The Greens (WA) inc",
+      "Preference": 12
+    },
+    {
+      "Group": "M",
+      "Party": "Pauline Hanson's One Nation",
+      "Preference": 2
+    },
+    {
+      "Group": "N",
+      "Party": "Legalise Cannabis Party",
+      "Preference": 11
+    },
+    {
+      "Group": "Q",
+      "Party": "Liberal",
+      "Preference": 10
+    },
+    {
+      "Group": "R",
+      "Party": "The Nationals",
+      "Preference": 7
+    }
+  ],
+  "SA": [
+    {
+      "Group": "A",
+      "Party": "Libertarian",
+      "Preference": 2
+    },
+    {
+      "Group": "C",
+      "Party": "Liberal",
+      "Preference": 6
+    },
+    {
+      "Group": "E",
+      "Party": "Animal Justice Party",
+      "Preference": 11
+    },
+    {
+      "Group": "F",
+      "Party": "Jacqui Lambie Network",
+      "Preference": 10
+    },
+    {
+      "Group": "G",
+      "Party": "Trumpet of Patriots",
+      "Preference": 8
+    },
+    {
+      "Group": "H",
+      "Party": "National Party",
+      "Preference": 7
+    },
+    {
+      "Group": "J",
+      "Party": "Gerard Rennick People First",
+      "Preference": 3
+    },
+    {
+      "Group": "K",
+      "Party": "Legalise Cannabis",
+      "Preference": 9
+    },
+    {
+      "Group": "L",
+      "Party": "Citizens Party",
+      "Preference": 5
+    },
+    {
+      "Group": "M",
+      "Party": "Family First",
+      "Preference": 4
+    },
+    {
+      "Group": "N",
+      "Party": "The Greens",
+      "Preference": 12
+    },
+    {
+      "Group": "P",
+      "Party": "Pauline Hanson's One Nation",
+      "Preference": 1
+    }
+  ],
+  "NT": [
+    {
+      "Group": "B",
+      "Party": "Legalise Cannabis Party",
+      "Preference": 5
+    },
+    {
+      "Group": "D",
+      "Party": "NT CLP",
+      "Preference": 4
+    },
+    {
+      "Group": "E",
+      "Party": "Australian Greens",
+      "Preference": 6
+    },
+    {
+      "Group": "F",
+      "Party": "Pauline Hanson's One Nation",
+      "Preference": 2
+    },
+    {
+      "Group": "G",
+      "Party": "Citizens Party",
+      "Preference": 3
+    },
+    {
+      "Group": "H",
+      "Party": "Libertarian",
+      "Preference": 1
+    }
+  ],
+  "ACT": [
+    {
+      "Group": "B",
+      "Party": "David Pocock",
+      "Preference": 4
+    },
+    {
+      "Group": "C",
+      "Party": "Animal Justice Party",
+      "Preference": 5
+    },
+    {
+      "Group": "E",
+      "Party": "Liberal",
+      "Preference": 3
+    },
+    {
+      "Group": "F",
+      "Party": "HEART  Party",
+      "Preference": 2
+    },
+    {
+      "Group": "G",
+      "Party": "Libertarian",
+      "Preference": 1
+    },
+    {
+      "Group": "H",
+      "Party": "Australian Greens",
+      "Preference": 6
+    }
+  ]
+}
