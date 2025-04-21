@@ -178,7 +178,7 @@
 
     function startCountdown() {
       const countdownEl = document.getElementById("countdown");
-      const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 0, 0)); // May 3, 12:00am AEST = May 2, 2:00pm UTC
+      const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 0, 0)); // May 3, 12:00am AEST (May 2, 2:00pm UTC)
       let hasCelebrated = false;
 
       function update() {
@@ -188,14 +188,16 @@
         if (diff <= 0 && !hasCelebrated) {
           countdownEl.textContent = "🗳️ Election Day is here!";
           hasCelebrated = true;
-          confetti({ particleCount: 150, spread: 90, origin: { y: 0.6 } });
+          confetti({ particleCount: 200, spread: 80, origin: { y: 0.6 } });
           return;
         }
 
-        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
-        countdownEl.textContent = `⏳ ${hours}h ${minutes}m ${seconds}s until Election Day`;
+
+        countdownEl.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Election Day`;
       }
 
       update();
