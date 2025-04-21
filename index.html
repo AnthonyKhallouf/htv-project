@@ -117,7 +117,9 @@
       pdfContent.innerHTML = `
         <h2>How to Vote in ${electorate}</h2>
         <h3>House Preferences</h3>
-        <ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
+        <ol>
+  ${housePrefs.map((c, i) => `<li>Preference ${i + 1}: ${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}
+</ol>
         <h3>Senate Preferences (${state})</h3>
         <ol>${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}</ol>
       `;
