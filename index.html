@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTV Card Generator</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
@@ -44,11 +44,7 @@
       100% { box-shadow: 0 0 4px yellow; }
     }
 
-    h2 {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 0;
-    }
+    h2 { font-size: 22px; font-weight: bold; margin: 0; }
 
     .shine-button,
     select {
@@ -70,22 +66,10 @@
       box-shadow: 0 0 8px red;
     }
 
-    .shine-button.aec-button {
-      padding-left: 6px;
-      padding-right: 6px;
-      box-shadow: 0 0 4px red;
-    }
+    .shine-button.aec-button { padding-left: 6px; padding-right: 6px; box-shadow: 0 0 4px red; }
+    .shine-button:hover { background: linear-gradient(to bottom, #bbb 0%, #222 100%); cursor: pointer; }
 
-    .shine-button:hover {
-      background: linear-gradient(to bottom, #bbb 0%, #222 100%);
-      cursor: pointer;
-    }
-
-    .share-row {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-    }
+    .share-row { display: flex; justify-content: center; gap: 8px; }
 
     .share-btn {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
@@ -103,14 +87,9 @@
       box-shadow: 0 0 4px red;
     }
 
-    .share-btn img {
-      width: 18px;
-      height: 18px;
-    }
+    .share-btn img { width: 18px; height: 18px; }
 
-    p {
-      margin: 0;
-    }
+    p { margin: 0; }
   </style>
 </head>
 <body>
@@ -131,39 +110,45 @@
     <button class="shine-button" onclick="downloadPDF()">📩 View & Download HTV Card (PDF)</button>
 
     <div class="share-row">
-      <button class="share-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />
-        Share
-      </button>
-      <button class="share-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
-        Share
-      </button>
-      <button class="share-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />
-        Share
-      </button>
+      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share</button>
+      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share</button>
+      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share</button>
     </div>
   </div>
 
   <script>
-    function downloadPDF() {
-      const element = document.getElementById("htv-generator");
-      html2pdf().from(element).save("HTV-Card.pdf");
+    const houseURL = 'https://anthonykhallouf.github.io/htv-preferences/house-preferences-2025.json';
+    const senateURL = 'https://anthonykhallouf.github.io/htv-preferences/senate-preferences-2025.json';
+    let houseData, senateData;
+
+    async function loadPreferences() {
+      houseData = await (await fetch(houseURL)).json();
+      senateData = await (await fetch(senateURL)).json();
+
+      const dropdown = document.getElementById('electorate-select');
+      Object.keys(houseData).forEach(electorate => {
+        const opt = document.createElement('option');
+        opt.value = electorate;
+        opt.textContent = electorate;
+        dropdown.appendChild(opt);
+      });
     }
 
-    // Load electorates into dropdown
-    fetch("electorate-to-state.json")
-      .then(response => response.json())
-      .then(data => {
-        const dropdown = document.getElementById("electorate-select");
-        data.forEach(e => {
-          const option = document.createElement("option");
-          option.value = e.electorate;
-          option.textContent = e.electorate;
-          dropdown.appendChild(option);
-        });
-      });
+    async function downloadPDF() {
+      const electorate = document.getElementById('electorate-select').value;
+      if (!electorate) { alert('Select an electorate first.'); return; }
+
+      const housePrefs = houseData[electorate].Preferences;
+      const state = houseData[electorate].State;
+      const senatePrefs = senateData[state];
+
+      const pdfContent = document.createElement('div');
+      pdfContent.innerHTML = `<h2>${electorate}</h2><h3>House Preferences</h3><ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol><h3>Senate Preferences (${state})</h3><ol>${senatePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>`;
+
+      html2pdf(pdfContent, { margin: 10, filename: `${electorate}-HTV-2025.pdf`, html2canvas: { scale: 2 }, jsPDF: { format: 'a4' }});
+    }
+
+    loadPreferences();
   </script>
 </body>
 </html>
