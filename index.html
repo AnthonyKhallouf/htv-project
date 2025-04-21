@@ -161,7 +161,7 @@
     }
 
     const countdown = document.getElementById("countdown-timer");
-    const targetDate = new Date("2025-05-03T00:00:00+10:00");
+    const targetDate = new Date("2025-05-03T00:01:00+10:00"); // AEST
     let confettiFired = false;
 
     function updateCountdown() {
@@ -170,6 +170,7 @@
 
       if (diff <= 0) {
         countdown.textContent = "🗳️ Election Day is here!";
+
         if (!confettiFired) {
           confettiFired = true;
           confetti({
@@ -178,6 +179,7 @@
             origin: { y: 0.6 }
           });
         }
+
         return;
       }
 
@@ -192,7 +194,7 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Load electorates from JSON
+    // Load electorate dropdown dynamically
     fetch("electorate-to-state.json")
       .then(response => response.json())
       .then(data => {
