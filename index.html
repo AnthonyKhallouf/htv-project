@@ -64,9 +64,7 @@
       width: 100%;
       box-shadow: 0 0 8px red;
     }
-    .shine-button.aec-button {
-      box-shadow: 0 0 4px red;
-    }
+    .shine-button.aec-button { box-shadow: 0 0 4px red; }
     .shine-button:hover {
       background: linear-gradient(to bottom, #bbb 0%, #222 100%);
       cursor: pointer;
@@ -90,10 +88,7 @@
       gap: 6px;
       box-shadow: 0 0 4px red;
     }
-    .share-btn img {
-      width: 18px;
-      height: 18px;
-    }
+    .share-btn img { width: 18px; height: 18px; }
     p { margin: 0; }
   </style>
 </head>
@@ -123,8 +118,7 @@
   <script>
     const houseURL = 'https://anthonykhallouf.github.io/htv-project/house-preferences-2025-FINAL.json';
     const senateURL = 'https://anthonykhallouf.github.io/htv-project/senate-preferences-2025-cleaned.json';
-    let houseData = {};
-    let senateData = {};
+    let houseData = {}, senateData = {};
 
     async function loadPreferences() {
       try {
@@ -139,22 +133,19 @@
         });
         console.log("✅ Loaded data successfully");
       } catch (error) {
-        alert("Failed to load How to Vote data. Please refresh or try again later.");
-        console.error("❌ Failed to load preference data:", error);
+        alert("Failed to load How to Vote data.");
+        console.error(error);
       }
     }
 
     async function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) return alert("Please select an electorate.");
-
       const houseInfo = houseData[electorate];
       if (!houseInfo) return alert(`House data not found for ${electorate}`);
-
       const housePrefs = houseInfo.preferences;
       const state = houseInfo.state;
       if (!state) return alert(`No state listed for ${electorate}`);
-
       const senatePrefs = senateData[state];
       if (!senatePrefs || !Array.isArray(senatePrefs)) {
         return alert(`Senate preferences not found for state: ${state}`);
@@ -166,27 +157,23 @@
       pdfContent.style.background = 'white';
       pdfContent.style.color = 'black';
       pdfContent.style.padding = '20px';
-      pdfContent.style.width = '600px';
-      pdfContent.style.minHeight = '800px';
+      pdfContent.style.width = '595px';
+      pdfContent.style.minHeight = '842px';
+      pdfContent.style.display = 'block';
       pdfContent.innerHTML = `
-        <div style="font-family: Arial, sans-serif;">
-          <h2 style="color:black;">How to Vote in ${electorate}</h2>
-          <h3 style="color:black;">House Preferences</h3>
-          <ol style="color:black;">
-            ${housePrefs.map(c => `<li>${c.Surname || c.surname || ''}, ${c.Name || c.name || ''} (${c.Party || c.party || ''})</li>`).join('')}
-          </ol>
-          <h3 style="color:black;">Senate Preferences (${state})</h3>
-          <ol style="color:black;">
-            ${senatePrefs.map(c => `<li>Group ${c.Group || c.group}: ${c.Party || c.party} (Preference ${c.Preference || c.preference})</li>`).join('')}
-          </ol>
+        <div style="font-family: Arial, sans-serif; color: black;">
+          <h2>How to Vote in ${electorate}</h2>
+          <h3>House Preferences</h3>
+          <ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
+          <h3>Senate Preferences (${state})</h3>
+          <ol>${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}</ol>
         </div>
       `;
       document.body.appendChild(pdfContent);
 
-      // Force layout reflow
-      void pdfContent.offsetHeight;
+      // Force DOM reflow before rendering
+      pdfContent.offsetHeight;
 
-      // Wait for DOM to fully render
       setTimeout(() => {
         html2pdf().from(pdfContent).set({
           margin: 10,
@@ -195,12 +182,8 @@
           jsPDF: { format: 'a4' }
         }).save().then(() => {
           document.body.removeChild(pdfContent);
-        }).catch(err => {
-          console.error("PDF generation error:", err);
-          alert("PDF could not be generated.");
-          document.body.removeChild(pdfContent);
         });
-      }, 300); // Delay ensures content is fully rendered
+      }, 500);
     }
 
     function startCountdown() {
