@@ -171,7 +171,7 @@
       if (diff <= 0) {
         countdown.textContent = "🗳️ Election Day is here!";
 
-        if (!confettiFired) {
+        if (!confettiFired && now >= targetDate) {
           confettiFired = true;
           confetti({
             particleCount: 200,
@@ -179,7 +179,6 @@
             origin: { y: 0.6 }
           });
         }
-
         return;
       }
 
