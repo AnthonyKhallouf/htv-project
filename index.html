@@ -159,21 +159,31 @@
       const state = houseData[electorate].state;
       const senatePrefs = senateData[state];
 
+      // Create hidden content container
       const pdfContent = document.createElement('div');
+      pdfContent.style.position = 'fixed';
+      pdfContent.style.top = '-10000px';
+      pdfContent.style.left = '-10000px';
+      pdfContent.style.background = 'white';
+      pdfContent.style.color = 'black';
+      pdfContent.style.padding = '20px';
       pdfContent.innerHTML = `
-        <h2>${electorate}</h2>
+        <h2>How to Vote in ${electorate}</h2>
         <h3>House Preferences</h3>
         <ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
         <h3>Senate Preferences (${state})</h3>
         <ol>${senatePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
       `;
+      document.body.appendChild(pdfContent);
 
-      html2pdf(pdfContent, {
+      await html2pdf().from(pdfContent).set({
         margin: 10,
         filename: `${electorate}-HTV-2025.pdf`,
         html2canvas: { scale: 2 },
         jsPDF: { format: 'a4' }
-      });
+      }).save();
+
+      document.body.removeChild(pdfContent);
     }
 
     function startCountdown() {
