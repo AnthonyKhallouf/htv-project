@@ -6,7 +6,6 @@
   <title>HTV Card Generator</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
   <style>
     body {
       background-color: black;
@@ -39,6 +38,11 @@
       animation: pulse 2s infinite;
     }
 
+    .donate-button:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
     @keyframes pulse {
       0% { box-shadow: 0 0 4px yellow; }
       50% { box-shadow: 0 0 12px yellow; }
@@ -46,14 +50,16 @@
     }
 
     .countdown-timer {
+      font-family: monospace;
       font-size: 14px;
       color: red;
-      font-family: monospace;
-      margin-top: 4px;
-      margin-bottom: 4px;
     }
 
-    h2 { font-size: 22px; font-weight: bold; margin: 0; }
+    h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0;
+    }
 
     .shine-button,
     select {
@@ -75,10 +81,22 @@
       box-shadow: 0 0 8px red;
     }
 
-    .shine-button.aec-button { padding-left: 6px; padding-right: 6px; box-shadow: 0 0 4px red; }
-    .shine-button:hover { background: linear-gradient(to bottom, #bbb 0%, #222 100%); cursor: pointer; }
+    .shine-button.aec-button {
+      padding-left: 6px;
+      padding-right: 6px;
+      box-shadow: 0 0 4px red;
+    }
 
-    .share-row { display: flex; justify-content: center; gap: 8px; }
+    .shine-button:hover {
+      background: linear-gradient(to bottom, #bbb 0%, #222 100%);
+      cursor: pointer;
+    }
+
+    .share-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
 
     .share-btn {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
@@ -96,18 +114,23 @@
       box-shadow: 0 0 4px red;
     }
 
-    .share-btn img { width: 18px; height: 18px; }
+    .share-btn img {
+      width: 18px;
+      height: 18px;
+    }
 
-    p { margin: 0; }
+    p {
+      margin: 0;
+    }
   </style>
 </head>
 <body>
   <div id="htv-generator">
-    <a href="https://australiansvstheagenda.com.au/donate" target="_blank">
-      <div class="donate-button">❤️ Donate to support @ausvstheagenda</div>
-    </a>
+    <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
+      ❤️ Donate to support @ausvstheagenda
+    </div>
 
-    <div id="countdown" class="countdown-timer">⏳ Loading countdown...</div>
+    <div class="countdown-timer" id="countdownTimer">⏳ Loading...</div>
 
     <h2>How to Vote in the 2025 Federal Election</h2>
 
@@ -140,7 +163,9 @@
       senateData = await (await fetch(senateURL)).json();
 
       const dropdown = document.getElementById('electorate-select');
-      Object.keys(houseData).sort().forEach(electorate => {
+      const sortedElectorates = Object.keys(houseData).sort();
+
+      sortedElectorates.forEach(electorate => {
         const opt = document.createElement('option');
         opt.value = electorate;
         opt.textContent = electorate;
@@ -155,11 +180,26 @@
         return;
       }
 
-      const housePrefs = houseData[electorate].preferences;
-      const state = houseData[electorate].state;
-      const senatePrefs = senateData[state];
+      const houseInfo = houseData[electorate];
+      if (!houseInfo) {
+        alert(`House data not found for ${electorate}`);
+        return;
+      }
 
-      // Create hidden content container
+      const housePrefs = houseInfo.preferences;
+      const state = houseInfo.state;
+
+      if (!state) {
+        alert(`No state listed for ${electorate}`);
+        return;
+      }
+
+      const senatePrefs = senateData[state];
+      if (!senatePrefs || !Array.isArray(senatePrefs)) {
+        alert(`Senate preferences not found for state: ${state}`);
+        return;
+      }
+
       const pdfContent = document.createElement('div');
       pdfContent.style.position = 'fixed';
       pdfContent.style.top = '-10000px';
@@ -187,18 +227,20 @@
     }
 
     function startCountdown() {
-      const countdownEl = document.getElementById("countdown");
-      const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 0, 0)); // May 3, 12:00am AEST (May 2, 2pm UTC)
-      let hasCelebrated = false;
+      const countdownElement = document.getElementById("countdownTimer");
+      const electionDate = new Date("2025-05-03T00:00:00+10:00");
 
-      function update() {
+      function updateCountdown() {
         const now = new Date();
-        const diff = targetDate - now;
+        const diff = electionDate - now;
 
-        if (diff <= 0 && !hasCelebrated) {
-          countdownEl.textContent = "🗳️ Election Day is here!";
-          hasCelebrated = true;
-          confetti({ particleCount: 200, spread: 80, origin: { y: 0.6 } });
+        if (diff <= 0) {
+          countdownElement.textContent = "🗳️ Election Day is here!";
+          confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: { y: 0.6 }
+          });
           return;
         }
 
@@ -207,11 +249,11 @@
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
 
-        countdownEl.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Election Day`;
+        countdownElement.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Election Day`;
+        setTimeout(updateCountdown, 1000);
       }
 
-      update();
-      setInterval(update, 1000);
+      updateCountdown();
     }
 
     loadPreferences();
