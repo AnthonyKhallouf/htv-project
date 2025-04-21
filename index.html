@@ -192,8 +192,8 @@
       const state = houseInfo.state;
       if (!state) return alert(`No state listed for ${electorate}`);
 
-      const senatePrefs = senateData[state];
-      if (!senatePrefs || !Array.isArray(senatePrefs)) return alert(`Senate preferences not found for state: ${state}`);
+      const senatePrefs = senateData.filter(c => c.State === state);
+if (!senatePrefs.length) return alert(`Senate preferences not found for state: ${state}`);
 
       const pdfContent = document.createElement('div');
       pdfContent.style.position = 'fixed';
