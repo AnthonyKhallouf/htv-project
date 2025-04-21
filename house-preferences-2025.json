@@ -1,5 +1,6 @@
 {
   "Banks": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -49,10 +50,10 @@
         "Name": "John",
         "Party": "Independent"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Barton": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -90,10 +91,10 @@
         "Name": "Thomas",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Bennelong": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 2,
@@ -137,10 +138,10 @@
         "Name": "Craig",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Berowra": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 6,
@@ -190,10 +191,10 @@
         "Name": "Julian",
         "Party": "Liberal"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Blaxland": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 2,
@@ -237,10 +238,10 @@
         "Name": "Ahmed",
         "Party": "Independent"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Bradfield": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -290,10 +291,10 @@
         "Name": "Rosemary",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Calare": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -355,10 +356,10 @@
         "Name": "Sam",
         "Party": "The Nationals"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Chifley": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -408,10 +409,10 @@
         "Name": "Rohan",
         "Party": "Animal Justice Party"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Cook": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -449,10 +450,10 @@
         "Name": "Mark",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Cowper": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 11,
@@ -520,10 +521,10 @@
         "Name": "Chris",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Cunningham": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 6,
@@ -561,10 +562,10 @@
         "Name": "Jess",
         "Party": "The Greens"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Dobell": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 7,
@@ -614,10 +615,10 @@
         "Name": "Emma",
         "Party": "Labor"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Eden-Monaro": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 6,
@@ -667,10 +668,10 @@
         "Name": "Richard",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Farrer": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 8,
@@ -726,10 +727,10 @@
         "Name": "Tanya",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Fowler": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -773,10 +774,10 @@
         "Name": "Vivek",
         "Party": "Liberal"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Gilmore": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 8,
@@ -826,10 +827,10 @@
         "Name": "Adrian Richard",
         "Party": "Legalise Cannabis Party"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Grayndler": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -867,10 +868,10 @@
         "Name": "David",
         "Party": "Independent"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Greenway": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 5,
@@ -914,10 +915,10 @@
         "Name": "Edwin",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Hughes": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 8,
@@ -967,10 +968,10 @@
         "Name": "Deborah",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Hume": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 2,
@@ -1020,10 +1021,10 @@
         "Name": "Peter",
         "Party": "Independent"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Hunter": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -1079,10 +1080,10 @@
         "Name": "Louise",
         "Party": "The Greens"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Kingsford Smith": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -1114,10 +1115,10 @@
         "Name": "Keiron",
         "Party": "The Greens"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Lindsay": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 2,
@@ -1179,10 +1180,10 @@
         "Name": "Joseph",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Lyne": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 9,
@@ -1244,10 +1245,10 @@
         "Name": "Mark Alexander",
         "Party": "Libertarian"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Macarthur": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 6,
@@ -1291,10 +1292,10 @@
         "Name": "Graham Ernest",
         "Party": "Family First"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Mackellar": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 5,
@@ -1350,10 +1351,10 @@
         "Name": "Jeffrey",
         "Party": "Labor"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Macquarie": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -1391,10 +1392,10 @@
         "Name": "Roger Gerard",
         "Party": "Family First"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "McMahon": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -1426,10 +1427,10 @@
         "Name": "Ben",
         "Party": "The Greens"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Mitchell": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 4,
@@ -1461,10 +1462,10 @@
         "Name": "Mark",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "New England": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -1508,10 +1509,10 @@
         "Name": "Brent",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Newcastle": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 4,
@@ -1561,10 +1562,10 @@
         "Name": "Phillip",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Page": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 8,
@@ -1632,10 +1633,10 @@
         "Name": "Josh",
         "Party": "Shooters, Fishers and Farmers Party"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Parkes": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -1697,10 +1698,10 @@
         "Name": "Sally",
         "Party": "Libertarian"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Parramatta": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 4,
@@ -1750,10 +1751,10 @@
         "Name": "Nicholas",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Paterson": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 7,
@@ -1815,10 +1816,10 @@
         "Name": "Daniel",
         "Party": "Legalise Cannabis Party"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Reid": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 6,
@@ -1862,10 +1863,10 @@
         "Name": "Steven",
         "Party": "Independent"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Richmond": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 9,
@@ -1927,10 +1928,10 @@
         "Name": "Richard",
         "Party": "Gerard Rennick People First"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Riverina": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -2010,10 +2011,10 @@
         "Name": "Christine",
         "Party": "Libertarian"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Robertson": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -2057,10 +2058,10 @@
         "Name": "Gordon",
         "Party": "Labor"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Shortland": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 1,
@@ -2104,10 +2105,10 @@
         "Name": "Therese",
         "Party": "The Greens"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Sydney": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 5,
@@ -2139,10 +2140,10 @@
         "Name": "Luc",
         "Party": "The Greens"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Warringah": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 7,
@@ -2192,10 +2193,10 @@
         "Name": "Bonnie",
         "Party": "The Greens"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Watson": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 9,
@@ -2251,10 +2252,10 @@
         "Name": "John",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Wentworth": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 3,
@@ -2292,10 +2293,10 @@
         "Name": "Allegra",
         "Party": "Independent"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Werriwa": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 8,
@@ -2351,10 +2352,10 @@
         "Name": "Gemma",
         "Party": "Libertarian"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Whitlam": {
+    "state": "NSW",
     "preferences": [
       {
         "Preference": 9,
@@ -2416,10 +2417,10 @@
         "Name": "Glenn",
         "Party": "Independent"
       }
-    ],
-    "state": "NSW"
+    ]
   },
   "Blair": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 2,
@@ -2481,10 +2482,10 @@
         "Name": "Brendan",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Bonner": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 4,
@@ -2534,10 +2535,10 @@
         "Name": "Kara",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Bowman": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 7,
@@ -2581,10 +2582,10 @@
         "Name": "Kristie",
         "Party": "The Greens"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Brisbane": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 3,
@@ -2634,10 +2635,10 @@
         "Name": "Rachael",
         "Party": "FUSION | Planet Rescue | Whistleblower Protection | Innovation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Capricornia": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 6,
@@ -2675,10 +2676,10 @@
         "Name": "Mick",
         "Party": "The Greens"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Dawson": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 5,
@@ -2722,10 +2723,10 @@
         "Name": "Neil",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Dickson": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 3,
@@ -2781,10 +2782,10 @@
         "Name": "Maureen",
         "Party": "Animal Justice Party"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Fadden": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 5,
@@ -2840,10 +2841,10 @@
         "Name": "John",
         "Party": "Gerard Rennick People First"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Fairfax": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 1,
@@ -2893,10 +2894,10 @@
         "Name": "Gregory",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Fisher": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 5,
@@ -2946,10 +2947,10 @@
         "Name": "Benjamin",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Flynn": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 7,
@@ -3005,10 +3006,10 @@
         "Name": "David",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Forde": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 3,
@@ -3058,10 +3059,10 @@
         "Name": "Matthew",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Griffith": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 6,
@@ -3105,10 +3106,10 @@
         "Name": "Aaron",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Groom": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 6,
@@ -3158,10 +3159,10 @@
         "Name": "Richard",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Herbert": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 3,
@@ -3211,10 +3212,10 @@
         "Name": "Darryn",
         "Party": "Katter's Australian Party (KAP)"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Hinkler": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 6,
@@ -3258,10 +3259,10 @@
         "Name": "Robert",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Kennedy": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 7,
@@ -3311,10 +3312,10 @@
         "Name": "Bob",
         "Party": "Katter's Australian Party (KAP)"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Leichhardt": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 8,
@@ -3376,10 +3377,10 @@
         "Name": "Greg Ian",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Lilley": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 4,
@@ -3417,10 +3418,10 @@
         "Name": "Kimberley",
         "Party": "LNP"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Longman": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 2,
@@ -3458,10 +3459,10 @@
         "Name": "Gabrielle",
         "Party": "The Greens"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Maranoa": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 1,
@@ -3511,10 +3512,10 @@
         "Name": "Sharon",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "McPherson": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 8,
@@ -3588,10 +3589,10 @@
         "Name": "Neena",
         "Party": "Family First"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Moncrieff": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 6,
@@ -3647,10 +3648,10 @@
         "Name": "Vic",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Moreton": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 5,
@@ -3700,10 +3701,10 @@
         "Name": "Grant",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Oxley": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 7,
@@ -3747,10 +3748,10 @@
         "Name": "William",
         "Party": "Family First"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Petrie": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 4,
@@ -3788,10 +3789,10 @@
         "Name": "Sharan",
         "Party": "Family First"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Rankin": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 4,
@@ -3841,10 +3842,10 @@
         "Name": "Janet",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Ryan": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 5,
@@ -3894,10 +3895,10 @@
         "Name": "Robbie",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Wide Bay": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 3,
@@ -3941,10 +3942,10 @@
         "Name": "Gabrial",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Wright": {
+    "state": "Qld",
     "preferences": [
       {
         "Preference": 3,
@@ -3994,10 +3995,10 @@
         "Name": "Justin",
         "Party": "Gerard Rennick People First"
       }
-    ],
-    "state": "Qld"
+    ]
   },
   "Aston": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 2,
@@ -4053,10 +4054,10 @@
         "Name": "Steve",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Ballarat": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 2,
@@ -4100,10 +4101,10 @@
         "Name": "Ian Maxwell",
         "Party": "Family First"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Bendigo": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -4165,10 +4166,10 @@
         "Name": "Matt",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Bruce": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 1,
@@ -4218,10 +4219,10 @@
         "Name": "Wendy",
         "Party": "Family First"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Calwell": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 7,
@@ -4301,10 +4302,10 @@
         "Name": "Usman",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Casey": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 4,
@@ -4354,10 +4355,10 @@
         "Name": "Aaron",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Chisholm": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 6,
@@ -4401,10 +4402,10 @@
         "Name": "Kath",
         "Party": "Independent"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Cooper": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 1,
@@ -4442,10 +4443,10 @@
         "Name": "Donna",
         "Party": "Legalise Cannabis Party"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Corangamite": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -4495,10 +4496,10 @@
         "Name": "Darcy",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Corio": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 1,
@@ -4536,10 +4537,10 @@
         "Name": "Richard",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Deakin": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 8,
@@ -4589,10 +4590,10 @@
         "Name": "Will",
         "Party": "Libertarian"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Dunkley": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 2,
@@ -4642,10 +4643,10 @@
         "Name": "Lisa",
         "Party": "Legalise Cannabis Party"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Flinders": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 3,
@@ -4689,10 +4690,10 @@
         "Name": "Adam",
         "Party": "The Greens"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Fraser": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 3,
@@ -4730,10 +4731,10 @@
         "Name": "Daniel",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Gellibrand": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -4765,10 +4766,10 @@
         "Name": "Jo",
         "Party": "Family First"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Gippsland": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -4800,10 +4801,10 @@
         "Name": "Simon",
         "Party": "Libertarian"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Goldstein": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 4,
@@ -4847,10 +4848,10 @@
         "Name": "Tim",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Gorton": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -4894,10 +4895,10 @@
         "Name": "Thuc Bao",
         "Party": "The Greens"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Hawke": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 3,
@@ -4941,10 +4942,10 @@
         "Name": "Matthew",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Holt": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 3,
@@ -4982,10 +4983,10 @@
         "Name": "Annette",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Hotham": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 4,
@@ -5023,10 +5024,10 @@
         "Name": "Harmick Singh",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Indi": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 8,
@@ -5082,10 +5083,10 @@
         "Name": "Mark",
         "Party": "Independent"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Isaacs": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -5117,10 +5118,10 @@
         "Name": "Geoff",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Jagajaga": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -5164,10 +5165,10 @@
         "Name": "Kate",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Kooyong": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 3,
@@ -5211,10 +5212,10 @@
         "Name": "Clive",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "La Trobe": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 4,
@@ -5252,10 +5253,10 @@
         "Name": "Leo",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Lalor": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 6,
@@ -5299,10 +5300,10 @@
         "Name": "Patrizia",
         "Party": "Libertarian"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Macnamara": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 6,
@@ -5340,10 +5341,10 @@
         "Name": "JB",
         "Party": "Independent"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Mallee": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 7,
@@ -5393,10 +5394,10 @@
         "Name": "Ashleigh",
         "Party": "Family First"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Maribyrnong": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 3,
@@ -5422,10 +5423,10 @@
         "Name": "Alannah",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "McEwen": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 1,
@@ -5481,10 +5482,10 @@
         "Name": "Rob",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Melbourne": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 1,
@@ -5528,10 +5529,10 @@
         "Name": "Steph",
         "Party": "Liberal"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Menzies": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -5581,10 +5582,10 @@
         "Name": "Jhett",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Monash": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 3,
@@ -5640,10 +5641,10 @@
         "Name": "Alex",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Nicholls": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 7,
@@ -5687,10 +5688,10 @@
         "Name": "Shelby",
         "Party": "The Greens"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Scullin": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 5,
@@ -5740,10 +5741,10 @@
         "Name": "Ursula",
         "Party": "Gerard Rennick People First"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Wannon": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 2,
@@ -5799,10 +5800,10 @@
         "Name": "Bernadine",
         "Party": "Independent"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Wills": {
+    "state": "Vic.",
     "preferences": [
       {
         "Preference": 6,
@@ -5852,10 +5853,10 @@
         "Name": "Bruce",
         "Party": "Pauline Hanson\u2019s One Nation"
       }
-    ],
-    "state": "Vic."
+    ]
   },
   "Brand": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 4,
@@ -5887,10 +5888,10 @@
         "Name": "Claire",
         "Party": "Liberal"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Bullwinkel": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 1,
@@ -5934,10 +5935,10 @@
         "Name": "Abbey",
         "Party": "The Greens (WA) Inc"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Burt": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 1,
@@ -5981,10 +5982,10 @@
         "Name": "Ashok Kumar",
         "Party": "Independent"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Canning": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 2,
@@ -6022,10 +6023,10 @@
         "Name": "Jarrad",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Cowan": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 2,
@@ -6075,10 +6076,10 @@
         "Name": "Anne",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Curtin": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 2,
@@ -6116,10 +6117,10 @@
         "Name": "Viktor Andrew",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Durack": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 3,
@@ -6175,10 +6176,10 @@
         "Name": "Eugenie Margaret",
         "Party": "Australian Christians"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Forrest": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 8,
@@ -6228,10 +6229,10 @@
         "Name": "Ben",
         "Party": "Liberal"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Fremantle": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 4,
@@ -6275,10 +6276,10 @@
         "Name": "Joshua",
         "Party": "Socialist Alliance"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Hasluck": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 7,
@@ -6322,10 +6323,10 @@
         "Name": "Leo",
         "Party": "Legalise Cannabis Party"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Moore": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 1,
@@ -6375,10 +6376,10 @@
         "Name": "Christopher",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Pearce": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 5,
@@ -6416,10 +6417,10 @@
         "Name": "John",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Perth": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 1,
@@ -6445,10 +6446,10 @@
         "Name": "Patrick",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Swan": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 3,
@@ -6486,10 +6487,10 @@
         "Name": "Mic",
         "Party": "Liberal"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Tangney": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 5,
@@ -6527,10 +6528,10 @@
         "Name": "James",
         "Party": "Australian Christians"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Adelaide": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 4,
@@ -6574,10 +6575,10 @@
         "Name": "Amy",
         "Party": "Liberal"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Barker": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 4,
@@ -6639,10 +6640,10 @@
         "Name": "Cody",
         "Party": "Independent"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Boothby": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 4,
@@ -6680,10 +6681,10 @@
         "Name": "Nicolle",
         "Party": "Liberal"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Grey": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 2,
@@ -6733,10 +6734,10 @@
         "Name": "Laury Hendrik",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Hindmarsh": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 4,
@@ -6792,10 +6793,10 @@
         "Name": "Matthew",
         "Party": "The Greens"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Kingston": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 7,
@@ -6839,10 +6840,10 @@
         "Name": "Bin",
         "Party": "Animal Justice Party"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Makin": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 5,
@@ -6892,10 +6893,10 @@
         "Name": "Tony",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Mayo": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 2,
@@ -6939,10 +6940,10 @@
         "Name": "Simeon Trump",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Spence": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 7,
@@ -6992,10 +6993,10 @@
         "Name": "John William",
         "Party": "Family First"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Sturt": {
+    "state": "SA",
     "preferences": [
       {
         "Preference": 7,
@@ -7039,10 +7040,10 @@
         "Name": "Katie",
         "Party": "The Greens"
       }
-    ],
-    "state": "SA"
+    ]
   },
   "Bass": {
+    "state": "Tas.",
     "preferences": [
       {
         "Preference": 7,
@@ -7086,10 +7087,10 @@
         "Name": "Ray",
         "Party": "Trumpet of Patriots"
       }
-    ],
-    "state": "Tas."
+    ]
   },
   "Braddon": {
+    "state": "Tas.",
     "preferences": [
       {
         "Preference": 3,
@@ -7127,10 +7128,10 @@
         "Name": "Mal",
         "Party": "Liberal"
       }
-    ],
-    "state": "Tas."
+    ]
   },
   "Clark": {
+    "state": "Tas.",
     "preferences": [
       {
         "Preference": 2,
@@ -7162,10 +7163,10 @@
         "Name": "Cathy",
         "Party": "Pauline Hanson's One Nation"
       }
-    ],
-    "state": "Tas."
+    ]
   },
   "Franklin": {
+    "state": "Tas.",
     "preferences": [
       {
         "Preference": 3,
@@ -7203,10 +7204,10 @@
         "Name": "Julie",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Tas."
+    ]
   },
   "Lyons": {
+    "state": "Tas.",
     "preferences": [
       {
         "Preference": 3,
@@ -7256,10 +7257,10 @@
         "Name": "Rebecca",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "Tas."
+    ]
   },
   "Lingiari": {
+    "state": "NT",
     "preferences": [
       {
         "Preference": 6,
@@ -7297,10 +7298,10 @@
         "Name": "Lisa",
         "Party": "NT CLP"
       }
-    ],
-    "state": "NT"
+    ]
   },
   "Solomon": {
+    "state": "NT",
     "preferences": [
       {
         "Preference": 6,
@@ -7344,10 +7345,10 @@
         "Name": "Luke John",
         "Party": "Australian Labor Party (Northern Territory) Branch"
       }
-    ],
-    "state": "NT"
+    ]
   },
   "Bean": {
+    "state": "ACT",
     "preferences": [
       {
         "Preference": 1,
@@ -7373,10 +7374,10 @@
         "Name": "David",
         "Party": "Australian Labor Party"
       }
-    ],
-    "state": "ACT"
+    ]
   },
   "O'Connor": {
+    "state": "WA",
     "preferences": [
       {
         "Preference": 5,
@@ -7426,10 +7427,10 @@
         "Name": "Deonne",
         "Party": "Australian Christians"
       }
-    ],
-    "state": "WA"
+    ]
   },
   "Canberra": {
+    "state": "ACT",
     "preferences": [
       {
         "Preference": 5,
@@ -7467,10 +7468,10 @@
         "Name": "Teresa",
         "Party": "AJP"
       }
-    ],
-    "state": "ACT"
+    ]
   },
   "Fenner": {
+    "state": "ACT",
     "preferences": [
       {
         "Preference": 2,
@@ -7496,7 +7497,6 @@
         "Name": "Dani",
         "Party": "Australian Greens"
       }
-    ],
-    "state": "ACT"
+    ]
   }
 }
