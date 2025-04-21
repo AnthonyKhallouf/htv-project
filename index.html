@@ -98,7 +98,7 @@
       if (!electorate) return alert("Please select an electorate.");
       const houseInfo = houseData[electorate];
       if (!houseInfo) return alert(`House data not found for ${electorate}`);
-      const housePrefs = houseInfo.preferences;
+      const housePrefs = houseInfo.preferences.slice().sort((a, b) => a.Preference - b.Preference);
       const state = houseInfo.state;
       if (!state) return alert(`No state listed for ${electorate}`);
       const senatePrefs = senateData[state];
