@@ -162,8 +162,8 @@
 
     const countdown = document.getElementById("countdown-timer");
 
-    // Use UTC time to make it universal (AEST = UTC+10)
-    const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 0, 0)); // May 3, 2025, 00:00 AEST == May 2, 2025, 14:00 UTC
+    // Correctly set AEST time (UTC+10)
+    const targetDate = new Date("2025-05-03T00:00:00+10:00");
 
     let confettiFired = false;
 
@@ -173,14 +173,16 @@
 
       if (diff <= 0) {
         countdown.textContent = "🗳️ Election Day is here!";
+
         if (!confettiFired) {
           confettiFired = true;
           confetti({
-            particleCount: 200,
-            spread: 90,
+            particleCount: 250,
+            spread: 100,
             origin: { y: 0.6 }
           });
         }
+
         return;
       }
 
