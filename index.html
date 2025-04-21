@@ -156,8 +156,8 @@
   <script>
     const houseURL = 'https://anthonykhallouf.github.io/htv-preferences/house-preferences-2025.json';
     const senateURL = 'https://anthonykhallouf.github.io/htv-preferences/senate-preferences-2025.json';
-
-    let houseData = {}, senateData = {};
+    let houseData = {};
+    let senateData = {};
 
     async function loadPreferences() {
       try {
@@ -175,13 +175,13 @@
         });
 
         console.log("✅ Loaded data successfully");
-      } catch (err) {
-        console.error("❌ Failed to load data:", err);
+      } catch (error) {
         alert("Failed to load How to Vote data. Please refresh or try again later.");
+        console.error("❌ Failed to load preference data:", error);
       }
     }
 
-    function downloadPDF() {
+    async function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) return alert("Please select an electorate.");
 
@@ -211,16 +211,30 @@
       `;
       document.body.appendChild(pdfContent);
 
-      html2pdf().from(pdfContent).set({
-        margin: 10,
-        filename: `${electorate}-HTV-2025.pdf`,
-        html2canvas: { scale: 2 },
-        jsPDF: { format: 'a4' }
-      }).save();
+      // Ensure all images (if any) are loaded before generating PDF
+      const images = pdfContent.querySelectorAll("img");
+      const imagePromises = Array.from(images).map(img => new Promise((resolve, reject) => {
+        if (img.complete) resolve();
+        else {
+          img.onload = resolve;
+          img.onerror = reject;
+        }
+      }));
 
-      setTimeout(() => {
+      Promise.all(imagePromises).then(() => {
+        html2pdf().from(pdfContent).set({
+          margin: 10,
+          filename: `${electorate}-HTV-2025.pdf`,
+          html2canvas: { scale: 2 },
+          jsPDF: { format: 'a4' }
+        }).save();
+
+        setTimeout(() => document.body.removeChild(pdfContent), 2000);
+      }).catch(err => {
+        console.error("Error loading images:", err);
+        alert("PDF could not be generated due to image loading issue.");
         document.body.removeChild(pdfContent);
-      }, 2000);
+      });
     }
 
     function startCountdown() {
