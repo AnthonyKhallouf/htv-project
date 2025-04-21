@@ -140,7 +140,7 @@
       senateData = await (await fetch(senateURL)).json();
 
       const dropdown = document.getElementById('electorate-select');
-      Object.keys(houseData).forEach(electorate => {
+      Object.keys(houseData).sort().forEach(electorate => {
         const opt = document.createElement('option');
         opt.value = electorate;
         opt.textContent = electorate;
@@ -178,7 +178,7 @@
 
     function startCountdown() {
       const countdownEl = document.getElementById("countdown");
-      const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 0, 0)); // May 3, 12:00am AEST (May 2, 2:00pm UTC)
+      const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 0, 0)); // May 3, 12:00am AEST (May 2, 2pm UTC)
       let hasCelebrated = false;
 
       function update() {
