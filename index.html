@@ -205,7 +205,7 @@ if (!senatePrefs.length) return alert(`Senate preferences not found for state: $
         <h3>House Preferences</h3>
         <ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
         <h3>Senate Preferences (${state})</h3>
-        <ol>${senatePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
+        <ol>${senatePrefs.map(c => `<li>${c.Preference}. ${c.Party} (Group ${c.Group})</li>`).join('')}</ol>
       `;
       document.body.appendChild(pdfContent);
 
