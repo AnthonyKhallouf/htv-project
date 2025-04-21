@@ -155,36 +155,40 @@
       pdfContent.style.position = 'fixed';
       pdfContent.style.top = '0';
       pdfContent.style.left = '0';
-      pdfContent.style.zIndex = '-1';
+      pdfContent.style.width = '100%';
       pdfContent.style.background = 'white';
       pdfContent.style.color = 'black';
       pdfContent.style.padding = '20px';
-      pdfContent.style.width = '595px';
-      pdfContent.style.minHeight = '842px';
+      pdfContent.style.zIndex = '9999';
       pdfContent.innerHTML = `
-        <div style="font-family: Arial, sans-serif; color: black;">
+        <div style="font-family: Arial, sans-serif;">
           <h2>How to Vote in ${electorate}</h2>
           <h3>House Preferences</h3>
-          <ol>${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
+          <ol>
+            ${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}
+          </ol>
           <h3>Senate Preferences (${state})</h3>
-          <ol>${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}</ol>
+          <ol>
+            ${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}
+          </ol>
         </div>
       `;
       document.body.appendChild(pdfContent);
 
-      requestAnimationFrame(() => {
-        html2pdf().from(pdfContent).set({
-          margin: 10,
-          filename: `${electorate}-HTV-2025.pdf`,
-          html2canvas: { scale: 2 },
-          jsPDF: { format: 'a4' }
-        }).save().then(() => {
-          document.body.removeChild(pdfContent);
-        }).catch(err => {
-          console.error("PDF generation error:", err);
-          alert("PDF could not be generated.");
-          document.body.removeChild(pdfContent);
-        });
+      // Ensure rendering before export
+      await new Promise(resolve => requestAnimationFrame(resolve));
+
+      html2pdf().from(pdfContent).set({
+        margin: 10,
+        filename: `${electorate}-HTV-2025.pdf`,
+        html2canvas: { scale: 2 },
+        jsPDF: { format: 'a4' }
+      }).save().then(() => {
+        document.body.removeChild(pdfContent);
+      }).catch(err => {
+        console.error("PDF error:", err);
+        alert("PDF could not be generated.");
+        document.body.removeChild(pdfContent);
       });
     }
 
