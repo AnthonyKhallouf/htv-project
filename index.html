@@ -136,7 +136,7 @@
       <option value="">-- Select your electorate --</option>
     </select>
 
-    <button class="shine-button" onclick="downloadPDF()">📥 View & Download HTV Card (PDF)</button>
+    <button class="shine-button" onclick="downloadPDF()">📩 View & Download HTV Card (PDF)</button>
 
     <div class="share-row">
       <button class="share-btn">
@@ -161,7 +161,7 @@
     }
 
     const countdown = document.getElementById("countdown-timer");
-    const targetDate = new Date("2025-05-03T00:00:00+10:00"); // May 3, 12:00:00am AEST
+    const targetDate = new Date("2025-05-03T00:00:00+10:00"); // 3 May 2025, 12:00am AEST
     let confettiFired = false;
 
     function updateCountdown() {
@@ -194,7 +194,7 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // Load electorate dropdown dynamically
+    // Load electorates dynamically
     fetch("electorate-to-state.json")
       .then(response => response.json())
       .then(data => {
