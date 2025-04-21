@@ -14,7 +14,6 @@
       text-align: center;
       padding: 20px;
     }
-
     #htv-generator {
       max-width: 400px;
       margin: 0 auto;
@@ -22,7 +21,6 @@
       flex-direction: column;
       gap: 14px;
     }
-
     .donate-button {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
       color: white;
@@ -37,32 +35,26 @@
       margin: 0 auto;
       animation: pulse 2s infinite;
     }
-
     .donate-button:hover {
       cursor: pointer;
       text-decoration: underline;
     }
-
     @keyframes pulse {
       0% { box-shadow: 0 0 4px yellow; }
       50% { box-shadow: 0 0 12px yellow; }
       100% { box-shadow: 0 0 4px yellow; }
     }
-
     .countdown-timer {
       font-family: monospace;
       font-size: 14px;
       color: red;
     }
-
     h2 {
       font-size: 22px;
       font-weight: bold;
       margin: 0;
     }
-
-    .shine-button,
-    select {
+    .shine-button, select {
       background: linear-gradient(to bottom, #999 0%, #1a1a1a 100%);
       color: white;
       font-weight: bold;
@@ -80,24 +72,20 @@
       width: 100%;
       box-shadow: 0 0 8px red;
     }
-
     .shine-button.aec-button {
       padding-left: 6px;
       padding-right: 6px;
       box-shadow: 0 0 4px red;
     }
-
     .shine-button:hover {
       background: linear-gradient(to bottom, #bbb 0%, #222 100%);
       cursor: pointer;
     }
-
     .share-row {
       display: flex;
       justify-content: center;
       gap: 8px;
     }
-
     .share-btn {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
       border: 2px solid red;
@@ -113,12 +101,10 @@
       gap: 6px;
       box-shadow: 0 0 4px red;
     }
-
     .share-btn img {
       width: 18px;
       height: 18px;
     }
-
     p {
       margin: 0;
     }
@@ -129,56 +115,40 @@
     <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
       ❤️ Donate to support @ausvstheagenda
     </div>
-
     <div class="countdown-timer" id="countdownTimer">⏳ Loading...</div>
-
     <h2>How to Vote in the 2025 Federal Election</h2>
-
     <p>Click below to find your electorate using the AEC website:</p>
     <a href="https://electorate.aec.gov.au/" target="_blank">
       <button class="shine-button aec-button">🔍 <b>Open AEC Electorate Finder</b></button>
     </a>
-
     <p>Then select your electorate below:</p>
     <select id="electorate-select">
       <option value="">-- Select your electorate --</option>
     </select>
-
-    <button class="shine-button" onclick="downloadPDF()">📥 View & Download HTV Card (PDF)</button>
-
+    <button class="shine-button" onclick="downloadPDF()">📅 View & Download HTV Card (PDF)</button>
     <div class="share-row">
       <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share</button>
       <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share</button>
       <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share</button>
     </div>
   </div>
-
   <script>
     const houseURL = 'https://anthonykhallouf.github.io/htv-preferences/house-preferences-2025.json';
     const senateURL = 'https://anthonykhallouf.github.io/htv-preferences/senate-preferences-2025.json';
-    let houseData = {};
-    let senateData = {};
+    let houseData = {}, senateData = {};
 
     async function loadPreferences() {
-      try {
-        houseData = await (await fetch(houseURL)).json();
-        senateData = await (await fetch(senateURL)).json();
+      houseData = await (await fetch(houseURL)).json();
+      senateData = await (await fetch(senateURL)).json();
 
-        const dropdown = document.getElementById('electorate-select');
-        const sortedElectorates = Object.keys(houseData).sort();
-
-        sortedElectorates.forEach(electorate => {
-          const opt = document.createElement('option');
-          opt.value = electorate;
-          opt.textContent = electorate;
-          dropdown.appendChild(opt);
-        });
-
-        console.log("✅ Loaded data successfully");
-      } catch (error) {
-        alert("Failed to load How to Vote data. Please refresh or try again later.");
-        console.error("❌ Failed to load preference data:", error);
-      }
+      const dropdown = document.getElementById('electorate-select');
+      const sortedElectorates = Object.keys(houseData).sort();
+      sortedElectorates.forEach(electorate => {
+        const opt = document.createElement('option');
+        opt.value = electorate;
+        opt.textContent = electorate;
+        dropdown.appendChild(opt);
+      });
     }
 
     async function downloadPDF() {
@@ -193,9 +163,7 @@
       if (!state) return alert(`No state listed for ${electorate}`);
 
       const senatePrefs = senateData[state];
-      if (!senatePrefs || !Array.isArray(senatePrefs)) {
-        return alert(`Senate preferences not found for state: ${state}`);
-      }
+      if (!senatePrefs || !Array.isArray(senatePrefs)) return alert(`Senate preferences not found for state: ${state}`);
 
       const pdfContent = document.createElement('div');
       pdfContent.style.position = 'fixed';
@@ -204,7 +172,6 @@
       pdfContent.style.background = 'white';
       pdfContent.style.color = 'black';
       pdfContent.style.padding = '20px';
-
       pdfContent.innerHTML = `
         <h2>How to Vote in ${electorate}</h2>
         <h3>House Preferences</h3>
@@ -212,57 +179,36 @@
         <h3>Senate Preferences (${state})</h3>
         <ol>${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}</ol>
       `;
-
       document.body.appendChild(pdfContent);
 
-      const images = pdfContent.querySelectorAll("img");
-      const imagePromises = Array.from(images).map(img => new Promise((resolve, reject) => {
-        if (img.complete) resolve();
-        else {
-          img.onload = resolve;
-          img.onerror = reject;
-        }
-      }));
+      await html2pdf().from(pdfContent).set({
+        margin: 10,
+        filename: `${electorate}-HTV-2025.pdf`,
+        html2canvas: { scale: 2 },
+        jsPDF: { format: 'a4' }
+      }).save();
 
-      Promise.all(imagePromises).then(() => {
-        html2pdf().from(pdfContent).set({
-          margin: 10,
-          filename: `${electorate}-HTV-2025.pdf`,
-          html2canvas: { scale: 2 },
-          jsPDF: { format: 'a4' }
-        }).save();
-
-        setTimeout(() => document.body.removeChild(pdfContent), 2000);
-      }).catch(err => {
-        console.error("Error loading images:", err);
-        alert("PDF could not be generated due to image loading issue.");
-        document.body.removeChild(pdfContent);
-      });
+      document.body.removeChild(pdfContent);
     }
 
     function startCountdown() {
       const countdownElement = document.getElementById("countdownTimer");
       const electionDate = new Date("2025-05-03T00:00:00+10:00");
-
       function updateCountdown() {
         const now = new Date();
         const diff = electionDate - now;
-
         if (diff <= 0) {
           countdownElement.textContent = "🗳️ Election Day is here!";
           confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
           return;
         }
-
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
-
         countdownElement.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Election Day`;
         setTimeout(updateCountdown, 1000);
       }
-
       updateCountdown();
     }
 
