@@ -617,7 +617,7 @@
       }
     ]
   },
-  "Eden-Monaro": {
+  "Eden-monaro": {
     "state": "NSW",
     "preferences": [
       {
@@ -1394,7 +1394,7 @@
       }
     ]
   },
-  "McMahon": {
+  "Mcmahon": {
     "state": "NSW",
     "preferences": [
       {
@@ -2420,7 +2420,7 @@
     ]
   },
   "Blair": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 2,
@@ -2485,7 +2485,7 @@
     ]
   },
   "Bonner": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 4,
@@ -2538,7 +2538,7 @@
     ]
   },
   "Bowman": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 7,
@@ -2585,7 +2585,7 @@
     ]
   },
   "Brisbane": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 3,
@@ -2638,7 +2638,7 @@
     ]
   },
   "Capricornia": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 6,
@@ -2679,7 +2679,7 @@
     ]
   },
   "Dawson": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 5,
@@ -2726,7 +2726,7 @@
     ]
   },
   "Dickson": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 3,
@@ -2785,7 +2785,7 @@
     ]
   },
   "Fadden": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 5,
@@ -2844,7 +2844,7 @@
     ]
   },
   "Fairfax": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 1,
@@ -2897,7 +2897,7 @@
     ]
   },
   "Fisher": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 5,
@@ -2950,7 +2950,7 @@
     ]
   },
   "Flynn": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 7,
@@ -3009,7 +3009,7 @@
     ]
   },
   "Forde": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 3,
@@ -3062,7 +3062,7 @@
     ]
   },
   "Griffith": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 6,
@@ -3109,7 +3109,7 @@
     ]
   },
   "Groom": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 6,
@@ -3162,7 +3162,7 @@
     ]
   },
   "Herbert": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 3,
@@ -3215,7 +3215,7 @@
     ]
   },
   "Hinkler": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 6,
@@ -3262,7 +3262,7 @@
     ]
   },
   "Kennedy": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 7,
@@ -3315,7 +3315,7 @@
     ]
   },
   "Leichhardt": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 8,
@@ -3380,7 +3380,7 @@
     ]
   },
   "Lilley": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 4,
@@ -3421,7 +3421,7 @@
     ]
   },
   "Longman": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 2,
@@ -3462,7 +3462,7 @@
     ]
   },
   "Maranoa": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 1,
@@ -3514,8 +3514,8 @@
       }
     ]
   },
-  "McPherson": {
-    "state": "Qld",
+  "Mcpherson": {
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 8,
@@ -3592,7 +3592,7 @@
     ]
   },
   "Moncrieff": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 6,
@@ -3651,7 +3651,7 @@
     ]
   },
   "Moreton": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 5,
@@ -3704,7 +3704,7 @@
     ]
   },
   "Oxley": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 7,
@@ -3751,7 +3751,7 @@
     ]
   },
   "Petrie": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 4,
@@ -3792,7 +3792,7 @@
     ]
   },
   "Rankin": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 4,
@@ -3845,7 +3845,7 @@
     ]
   },
   "Ryan": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 5,
@@ -3898,7 +3898,7 @@
     ]
   },
   "Wide Bay": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 3,
@@ -3945,7 +3945,7 @@
     ]
   },
   "Wright": {
-    "state": "Qld",
+    "state": "QLD",
     "preferences": [
       {
         "Preference": 3,
@@ -5425,7 +5425,7 @@
       }
     ]
   },
-  "McEwen": {
+  "Mcewen": {
     "state": "Vic.",
     "preferences": [
       {
@@ -5851,7 +5851,7 @@
         "Preference": 1,
         "Surname": "STEVENS",
         "Name": "Bruce",
-        "Party": "Pauline Hanson\u2019s One Nation"
+        "Party": "Pauline Hanson’s One Nation"
       }
     ]
   },
@@ -7376,7 +7376,7 @@
       }
     ]
   },
-  "O'Connor": {
+  "O'connor": {
     "state": "WA",
     "preferences": [
       {
@@ -7419,7 +7419,7 @@
         "Preference": 1,
         "Surname": "JOHNSTON",
         "Name": "Gemma",
-        "Party": "Pauline Hanson\u2019s One Nation"
+        "Party": "Pauline Hanson’s One Nation"
       },
       {
         "Preference": 4,
