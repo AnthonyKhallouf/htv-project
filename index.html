@@ -146,36 +146,39 @@
     }
 
     const countdown = document.getElementById("countdown-timer");
-    const targetDate = new Date("2025-05-03T00:00:00+10:00"); // 12:00am AEST
-    let confettiFired = false;
+  const targetDate = new Date("2025-05-03T00:00:00+10:00"); // ✅ AEST at midnight
 
-    function updateCountdown() {
-      const now = new Date();
-      const diff = targetDate - now;
+  let confettiFired = false;
 
-      if (diff <= 0) {
-        countdown.textContent = "🗳️ Election Day is here!";
-        if (!confettiFired) {
-          confettiFired = true;
-          confetti({
-            particleCount: 200,
-            spread: 90,
-            origin: { y: 0.6 }
-          });
-        }
-        return;
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      countdown.textContent = "🗳️ Election Day is here!";
+
+      if (!confettiFired) {
+        confettiFired = true;
+        confetti({
+          particleCount: 200,
+          spread: 90,
+          origin: { y: 0.6 }
+        });
       }
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      countdown.textContent = `⏳ ${days}d ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      return;
     }
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    countdown.textContent = `⏳ ${days}d ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
 
     fetch("electorate-to-state.json")
       .then(response => response.json())
