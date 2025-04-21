@@ -6,6 +6,7 @@
   <title>HTV Card Generator</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
   <style>
     body {
       background-color: black;
@@ -154,54 +155,55 @@
   </div>
 
   <script>
-  function downloadPDF() {
-    const element = document.getElementById("htv-generator");
-    html2pdf().from(element).save("HTV-Card.pdf");
-  }
-
-  const countdown = document.getElementById("countdown-timer");
-  const targetDate = new Date("2025-05-03T00:00:00+10:00"); // May 3, 2025, 12:00 AM AEST
-  let confettiFired = false;
-
-  function updateCountdown() {
-    const now = new Date();
-    const diff = targetDate.getTime() - now.getTime();
-
-    if (diff <= 0 && !confettiFired) {
-      countdown.textContent = "🗳️ Election Day is here!";
-      confettiFired = true;
-
-      confetti({
-        particleCount: 200,
-        spread: 90,
-        origin: { y: 0.6 }
-      });
-      return;
+    function downloadPDF() {
+      const element = document.getElementById("htv-generator");
+      html2pdf().from(element).save("HTV-Card.pdf");
     }
 
-    if (diff > 0) {
+    const countdown = document.getElementById("countdown-timer");
+    const targetDate = new Date("2025-05-03T00:00:00+10:00"); // ✅ AEST Midnight on May 3
+    let confettiFired = false;
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdown.textContent = "🗳️ Election Day is here!";
+
+        if (!confettiFired) {
+          confettiFired = true;
+          confetti({
+            particleCount: 200,
+            spread: 90,
+            origin: { y: 0.6 }
+          });
+        }
+        return;
+      }
+
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
+
       countdown.textContent = `⏳ ${days}d ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     }
-  }
 
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-  fetch("electorate-to-state.json")
-    .then(response => response.json())
-    .then(data => {
-      const dropdown = document.getElementById("electorate-select");
-      data.forEach(e => {
-        const option = document.createElement("option");
-        option.value = e.electorate;
-        option.textContent = e.electorate;
-        dropdown.appendChild(option);
+    fetch("electorate-to-state.json")
+      .then(response => response.json())
+      .then(data => {
+        const dropdown = document.getElementById("electorate-select");
+        data.forEach(e => {
+          const option = document.createElement("option");
+          option.value = e.electorate;
+          option.textContent = e.electorate;
+          dropdown.appendChild(option);
+        });
       });
-    });
-</script>
+  </script>
 </body>
 </html>
