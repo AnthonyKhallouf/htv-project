@@ -145,45 +145,62 @@
     }
 
     async function downloadPDF() {
-      const electorate = document.getElementById('electorate-select').value;
-      if (!electorate) return alert("Please select an electorate.");
-      const houseInfo = houseData[electorate];
-      if (!houseInfo) return alert(`House data not found for ${electorate}`);
-      const housePrefs = houseInfo.preferences;
-      const state = houseInfo.state;
-      if (!state) return alert(`No state listed for ${electorate}`);
-      const senatePrefs = senateData[state];
-      if (!senatePrefs || !Array.isArray(senatePrefs)) return alert(`Senate preferences not found for state: ${state}`);
+  const electorate = document.getElementById('electorate-select').value;
+  if (!electorate) return alert("Please select an electorate.");
 
-      const pdfContent = document.createElement('div');
-      pdfContent.style.position = 'absolute';
-      pdfContent.style.top = '-9999px';
-      pdfContent.style.left = '-9999px';
-      pdfContent.style.background = 'white';
-      pdfContent.style.color = 'black';
-      pdfContent.style.padding = '20px';
-      pdfContent.innerHTML = `
-        <h2 style="color:black;">How to Vote in ${electorate}</h2>
-        <h3 style="color:black;">House Preferences</h3>
-        <ol>${housePrefs.map(c => `<li style="color:black;">${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}</ol>
-        <h3 style="color:black;">Senate Preferences (${state})</h3>
-        <ol>${senatePrefs.map(c => `<li style="color:black;">Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}</ol>
-      `;
-      document.body.appendChild(pdfContent);
+  const houseInfo = houseData[electorate];
+  if (!houseInfo) return alert(`House data not found for ${electorate}`);
 
-      html2pdf().from(pdfContent).set({
-        margin: 10,
-        filename: `${electorate}-HTV-2025.pdf`,
-        html2canvas: { scale: 2 },
-        jsPDF: { format: 'a4' }
-      }).save().then(() => {
-        document.body.removeChild(pdfContent);
-      }).catch(err => {
-        console.error("PDF error:", err);
-        alert("PDF could not be generated.");
-        document.body.removeChild(pdfContent);
-      });
-    }
+  const housePrefs = houseInfo.preferences;
+  const state = houseInfo.state;
+  if (!state) return alert(`No state listed for ${electorate}`);
+
+  const senatePrefs = senateData[state];
+  if (!senatePrefs || !Array.isArray(senatePrefs)) {
+    return alert(`Senate preferences not found for state: ${state}`);
+  }
+
+  const pdfContent = document.createElement('div');
+  pdfContent.style.position = 'absolute';
+  pdfContent.style.top = '-10000px';
+  pdfContent.style.left = '-10000px';
+  pdfContent.style.background = 'white';
+  pdfContent.style.color = 'black';
+  pdfContent.style.padding = '20px';
+  pdfContent.style.width = '600px';
+  pdfContent.style.minHeight = '1000px';
+  pdfContent.innerHTML = `
+    <div style="font-family: Arial, sans-serif;">
+      <h2 style="color:black;">How to Vote in ${electorate}</h2>
+      <h3 style="color:black;">House Preferences</h3>
+      <ol style="color:black;">
+        ${housePrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}
+      </ol>
+      <h3 style="color:black;">Senate Preferences (${state})</h3>
+      <ol style="color:black;">
+        ${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}
+      </ol>
+    </div>
+  `;
+  document.body.appendChild(pdfContent);
+
+  // Wait for DOM to render fully before exporting
+  setTimeout(() => {
+    html2pdf().from(pdfContent).set({
+      margin: 10,
+      filename: `${electorate}-HTV-2025.pdf`,
+      html2canvas: { scale: 2, logging: true },
+      jsPDF: { format: 'a4' }
+    }).save().then(() => {
+      document.body.removeChild(pdfContent);
+    }).catch(err => {
+      console.error("PDF error:", err);
+      alert("PDF could not be generated.");
+      document.body.removeChild(pdfContent);
+    });
+  }, 300);
+}
+
 
     function startCountdown() {
       const countdownElement = document.getElementById("countdownTimer");
