@@ -161,7 +161,7 @@
     }
 
     const countdown = document.getElementById("countdown-timer");
-    const targetDate = new Date(Date.UTC(2025, 4, 2, 14, 1, 0)); // May 3, 12:00am AEST
+    const targetDate = new Date("2025-05-03T00:01:00+10:00"); // ✅ May 3, 12:00am AEST
     let confettiFired = false;
 
     function updateCountdown() {
