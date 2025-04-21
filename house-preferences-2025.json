@@ -1,6 +1,6 @@
 {
   "Banks": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -53,7 +53,7 @@
     ]
   },
   "Barton": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -94,7 +94,7 @@
     ]
   },
   "Bennelong": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -141,7 +141,7 @@
     ]
   },
   "Berowra": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -194,7 +194,7 @@
     ]
   },
   "Blaxland": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -241,7 +241,7 @@
     ]
   },
   "Bradfield": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -294,7 +294,7 @@
     ]
   },
   "Calare": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -359,7 +359,7 @@
     ]
   },
   "Chifley": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -412,7 +412,7 @@
     ]
   },
   "Cook": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -453,7 +453,7 @@
     ]
   },
   "Cowper": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 11,
@@ -524,7 +524,7 @@
     ]
   },
   "Cunningham": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -565,7 +565,7 @@
     ]
   },
   "Dobell": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -618,7 +618,7 @@
     ]
   },
   "Eden-Monaro": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -671,7 +671,7 @@
     ]
   },
   "Farrer": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -730,7 +730,7 @@
     ]
   },
   "Fowler": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -777,7 +777,7 @@
     ]
   },
   "Gilmore": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -830,7 +830,7 @@
     ]
   },
   "Grayndler": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -871,7 +871,7 @@
     ]
   },
   "Greenway": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -918,7 +918,7 @@
     ]
   },
   "Hughes": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -971,7 +971,7 @@
     ]
   },
   "Hume": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -1024,7 +1024,7 @@
     ]
   },
   "Hunter": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -1083,7 +1083,7 @@
     ]
   },
   "Kingsford Smith": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -1118,7 +1118,7 @@
     ]
   },
   "Lindsay": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -1183,7 +1183,7 @@
     ]
   },
   "Lyne": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 9,
@@ -1248,7 +1248,7 @@
     ]
   },
   "Macarthur": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -1295,7 +1295,7 @@
     ]
   },
   "Mackellar": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -1354,7 +1354,7 @@
     ]
   },
   "Macquarie": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -1395,7 +1395,7 @@
     ]
   },
   "McMahon": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -1430,7 +1430,7 @@
     ]
   },
   "Mitchell": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -1465,7 +1465,7 @@
     ]
   },
   "New England": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -1512,7 +1512,7 @@
     ]
   },
   "Newcastle": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -1565,7 +1565,7 @@
     ]
   },
   "Page": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -1636,7 +1636,7 @@
     ]
   },
   "Parkes": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -1701,7 +1701,7 @@
     ]
   },
   "Parramatta": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -1754,7 +1754,7 @@
     ]
   },
   "Paterson": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -1819,7 +1819,7 @@
     ]
   },
   "Reid": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -1866,7 +1866,7 @@
     ]
   },
   "Richmond": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 9,
@@ -1931,7 +1931,7 @@
     ]
   },
   "Riverina": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -2014,7 +2014,7 @@
     ]
   },
   "Robertson": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -2061,7 +2061,7 @@
     ]
   },
   "Shortland": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -2108,7 +2108,7 @@
     ]
   },
   "Sydney": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -2143,7 +2143,7 @@
     ]
   },
   "Warringah": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -2196,7 +2196,7 @@
     ]
   },
   "Watson": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 9,
@@ -2255,7 +2255,7 @@
     ]
   },
   "Wentworth": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -2296,7 +2296,7 @@
     ]
   },
   "Werriwa": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -2355,7 +2355,7 @@
     ]
   },
   "Whitlam": {
-    "state": "NSW",
+    "state": "",
     "preferences": [
       {
         "Preference": 9,
@@ -2420,7 +2420,7 @@
     ]
   },
   "Blair": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -2485,7 +2485,7 @@
     ]
   },
   "Bonner": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -2538,7 +2538,7 @@
     ]
   },
   "Bowman": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -2585,7 +2585,7 @@
     ]
   },
   "Brisbane": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -2638,7 +2638,7 @@
     ]
   },
   "Capricornia": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -2679,7 +2679,7 @@
     ]
   },
   "Dawson": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -2726,7 +2726,7 @@
     ]
   },
   "Dickson": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -2785,7 +2785,7 @@
     ]
   },
   "Fadden": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -2844,7 +2844,7 @@
     ]
   },
   "Fairfax": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -2897,7 +2897,7 @@
     ]
   },
   "Fisher": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -2950,7 +2950,7 @@
     ]
   },
   "Flynn": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -3009,7 +3009,7 @@
     ]
   },
   "Forde": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -3062,7 +3062,7 @@
     ]
   },
   "Griffith": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -3109,7 +3109,7 @@
     ]
   },
   "Groom": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -3162,7 +3162,7 @@
     ]
   },
   "Herbert": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -3215,7 +3215,7 @@
     ]
   },
   "Hinkler": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -3262,7 +3262,7 @@
     ]
   },
   "Kennedy": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -3315,7 +3315,7 @@
     ]
   },
   "Leichhardt": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -3380,7 +3380,7 @@
     ]
   },
   "Lilley": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -3421,7 +3421,7 @@
     ]
   },
   "Longman": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -3462,7 +3462,7 @@
     ]
   },
   "Maranoa": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -3515,7 +3515,7 @@
     ]
   },
   "McPherson": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -3592,7 +3592,7 @@
     ]
   },
   "Moncrieff": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -3651,7 +3651,7 @@
     ]
   },
   "Moreton": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -3704,7 +3704,7 @@
     ]
   },
   "Oxley": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -3751,7 +3751,7 @@
     ]
   },
   "Petrie": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -3792,7 +3792,7 @@
     ]
   },
   "Rankin": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -3845,7 +3845,7 @@
     ]
   },
   "Ryan": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -3898,7 +3898,7 @@
     ]
   },
   "Wide Bay": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -3945,7 +3945,7 @@
     ]
   },
   "Wright": {
-    "state": "Qld",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -3998,7 +3998,7 @@
     ]
   },
   "Aston": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -4057,7 +4057,7 @@
     ]
   },
   "Ballarat": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -4104,7 +4104,7 @@
     ]
   },
   "Bendigo": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -4169,7 +4169,7 @@
     ]
   },
   "Bruce": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -4222,7 +4222,7 @@
     ]
   },
   "Calwell": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -4305,7 +4305,7 @@
     ]
   },
   "Casey": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -4358,7 +4358,7 @@
     ]
   },
   "Chisholm": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -4405,7 +4405,7 @@
     ]
   },
   "Cooper": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -4446,7 +4446,7 @@
     ]
   },
   "Corangamite": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -4499,7 +4499,7 @@
     ]
   },
   "Corio": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -4540,7 +4540,7 @@
     ]
   },
   "Deakin": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -4593,7 +4593,7 @@
     ]
   },
   "Dunkley": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -4646,7 +4646,7 @@
     ]
   },
   "Flinders": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -4693,7 +4693,7 @@
     ]
   },
   "Fraser": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -4734,7 +4734,7 @@
     ]
   },
   "Gellibrand": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -4769,7 +4769,7 @@
     ]
   },
   "Gippsland": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -4804,7 +4804,7 @@
     ]
   },
   "Goldstein": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -4851,7 +4851,7 @@
     ]
   },
   "Gorton": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -4898,7 +4898,7 @@
     ]
   },
   "Hawke": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -4945,7 +4945,7 @@
     ]
   },
   "Holt": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -4986,7 +4986,7 @@
     ]
   },
   "Hotham": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -5027,7 +5027,7 @@
     ]
   },
   "Indi": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -5086,7 +5086,7 @@
     ]
   },
   "Isaacs": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -5121,7 +5121,7 @@
     ]
   },
   "Jagajaga": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -5168,7 +5168,7 @@
     ]
   },
   "Kooyong": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -5215,7 +5215,7 @@
     ]
   },
   "La Trobe": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -5256,7 +5256,7 @@
     ]
   },
   "Lalor": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -5303,7 +5303,7 @@
     ]
   },
   "Macnamara": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -5344,7 +5344,7 @@
     ]
   },
   "Mallee": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -5397,7 +5397,7 @@
     ]
   },
   "Maribyrnong": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -5426,7 +5426,7 @@
     ]
   },
   "McEwen": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -5485,7 +5485,7 @@
     ]
   },
   "Melbourne": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -5532,7 +5532,7 @@
     ]
   },
   "Menzies": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -5585,7 +5585,7 @@
     ]
   },
   "Monash": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -5644,7 +5644,7 @@
     ]
   },
   "Nicholls": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -5691,7 +5691,7 @@
     ]
   },
   "Scullin": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -5744,7 +5744,7 @@
     ]
   },
   "Wannon": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -5803,7 +5803,7 @@
     ]
   },
   "Wills": {
-    "state": "Vic.",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -5856,7 +5856,7 @@
     ]
   },
   "Brand": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -5891,7 +5891,7 @@
     ]
   },
   "Bullwinkel": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -5938,7 +5938,7 @@
     ]
   },
   "Burt": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -5985,7 +5985,7 @@
     ]
   },
   "Canning": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -6026,7 +6026,7 @@
     ]
   },
   "Cowan": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -6079,7 +6079,7 @@
     ]
   },
   "Curtin": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -6120,7 +6120,7 @@
     ]
   },
   "Durack": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -6179,7 +6179,7 @@
     ]
   },
   "Forrest": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 8,
@@ -6232,7 +6232,7 @@
     ]
   },
   "Fremantle": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -6279,7 +6279,7 @@
     ]
   },
   "Hasluck": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -6326,7 +6326,7 @@
     ]
   },
   "Moore": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -6379,7 +6379,7 @@
     ]
   },
   "Pearce": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -6420,7 +6420,7 @@
     ]
   },
   "Perth": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -6449,7 +6449,7 @@
     ]
   },
   "Swan": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -6490,7 +6490,7 @@
     ]
   },
   "Tangney": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -6531,7 +6531,7 @@
     ]
   },
   "Adelaide": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -6578,7 +6578,7 @@
     ]
   },
   "Barker": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -6643,7 +6643,7 @@
     ]
   },
   "Boothby": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -6684,7 +6684,7 @@
     ]
   },
   "Grey": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -6737,7 +6737,7 @@
     ]
   },
   "Hindmarsh": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 4,
@@ -6796,7 +6796,7 @@
     ]
   },
   "Kingston": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -6843,7 +6843,7 @@
     ]
   },
   "Makin": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -6896,7 +6896,7 @@
     ]
   },
   "Mayo": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -6943,7 +6943,7 @@
     ]
   },
   "Spence": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -6996,7 +6996,7 @@
     ]
   },
   "Sturt": {
-    "state": "SA",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -7043,7 +7043,7 @@
     ]
   },
   "Bass": {
-    "state": "Tas.",
+    "state": "",
     "preferences": [
       {
         "Preference": 7,
@@ -7090,7 +7090,7 @@
     ]
   },
   "Braddon": {
-    "state": "Tas.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -7131,7 +7131,7 @@
     ]
   },
   "Clark": {
-    "state": "Tas.",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
@@ -7166,7 +7166,7 @@
     ]
   },
   "Franklin": {
-    "state": "Tas.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -7207,7 +7207,7 @@
     ]
   },
   "Lyons": {
-    "state": "Tas.",
+    "state": "",
     "preferences": [
       {
         "Preference": 3,
@@ -7260,7 +7260,7 @@
     ]
   },
   "Lingiari": {
-    "state": "NT",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -7301,7 +7301,7 @@
     ]
   },
   "Solomon": {
-    "state": "NT",
+    "state": "",
     "preferences": [
       {
         "Preference": 6,
@@ -7348,7 +7348,7 @@
     ]
   },
   "Bean": {
-    "state": "ACT",
+    "state": "",
     "preferences": [
       {
         "Preference": 1,
@@ -7377,7 +7377,7 @@
     ]
   },
   "O'Connor": {
-    "state": "WA",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -7430,7 +7430,7 @@
     ]
   },
   "Canberra": {
-    "state": "ACT",
+    "state": "",
     "preferences": [
       {
         "Preference": 5,
@@ -7471,7 +7471,7 @@
     ]
   },
   "Fenner": {
-    "state": "ACT",
+    "state": "",
     "preferences": [
       {
         "Preference": 2,
