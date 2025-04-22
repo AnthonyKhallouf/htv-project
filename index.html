@@ -71,7 +71,7 @@
   </div>
 
   <script>
-    const houseURL = 'https://anthonykhallouf.github.io/htv-project-clone/house-preferences-2025-FINAL.json';
+    const houseURL = 'https://anthonykhallouf.github.io/htv-project/house-preferences-2025-FINAL.json';
     let houseData = {};
 
     async function loadElectorates() {
@@ -94,7 +94,7 @@
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) return alert("Please select an electorate.");
       const filename = electorate.toLowerCase().replace(/\s+/g, '') + ".html";
-      const url = `https://anthonykhallouf.github.io/htv-project-clone/ballots/${filename}`;
+      const url = `https://anthonykhallouf.github.io/htv-project/ballots/${filename}`;
       try {
         const response = await fetch(url);
         if (!response.ok) throw new Error("Ballot not found.");
