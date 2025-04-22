@@ -44,20 +44,11 @@
       display: flex; align-items: center; gap: 6px; box-shadow: 0 0 4px red;
     }
     .share-btn img { width: 18px; height: 18px; }
-    .test-btn {
-      background: red;
-      font-weight: bold;
-      padding: 10px;
-      border-radius: 8px;
-      color: white;
-      border: none;
-    }
     p { margin: 0; }
   </style>
 </head>
 <body>
   <div id="htv-generator">
-    <button class="test-btn" onclick="testPDF()">✏️ Test PDF Download</button>
     <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
       ❤️ Donate to support @ausvstheagenda
     </div>
@@ -99,39 +90,30 @@
       }
     }
 
-    function testPDF() {
-      const test = document.createElement('div');
-      test.innerHTML = `<h2>Hello PDF!</h2><p>This is a test to check html2pdf is working.</p>`;
-      html2pdf().from(test).set({ margin: 10, filename: 'test-download.pdf' }).save();
-    }
-
-    function downloadPDF() {
+    async function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) return alert("Please select an electorate.");
-      const houseInfo = houseData[electorate];
-      if (!houseInfo || !houseInfo.preferences) return alert("No preference data found.");
-      const sortedPrefs = houseInfo.preferences.sort((a, b) => a.Preference - b.Preference);
-      const state = houseInfo.state;
-
-      const content = document.createElement('div');
-      content.style.width = '595px';
-      content.style.padding = '30px';
-      content.innerHTML = `
-        <h2 style="text-align:center;">How to Vote in ${electorate}</h2>
-        <h3>House Preferences</h3>
-        <ol>
-          ${sortedPrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}
-        </ol>
-        <div style="margin-top:40px;font-size:12px;text-align:center;border-top:1px solid black;padding-top:10px;">
-          Authorised by Anthony Khallouf for Australians vs The Agenda, 5 Denison Street, Hornsby NSW 2077
-        </div>
-      `;
-      html2pdf().from(content).set({
-        margin: 10,
-        filename: `${electorate}-HTV-2025.pdf`,
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { format: 'a4', orientation: 'portrait' }
-      }).save();
+      const filename = electorate.toLowerCase().replace(/\s+/g, '') + ".html";
+      const url = `https://anthonykhallouf.github.io/htv-project/ballots/${filename}`;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Ballot not found.");
+        const html = await response.text();
+        const container = document.createElement('div');
+        container.innerHTML = html;
+        document.body.appendChild(container);
+        html2pdf().from(container).set({
+          margin: 0,
+          filename: `${electorate}-HTV-2025.pdf`,
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { format: 'a4', orientation: 'portrait' }
+        }).save().then(() => {
+          document.body.removeChild(container);
+        });
+      } catch (err) {
+        alert("Could not load ballot: " + err.message);
+        console.error(err);
+      }
     }
 
     function startCountdown() {
