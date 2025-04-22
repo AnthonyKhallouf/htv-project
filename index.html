@@ -93,27 +93,31 @@
     async function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) return alert("Please select an electorate.");
-
-      const fileName = electorate.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '') + '.html';
-      const filePath = `https://anthonykhallouf.github.io/htv-project/ballots/${fileName}`;
-
+      const filename = electorate.toLowerCase().replace(/\s+/g, '') + ".html";
+      const url = `https://anthonykhallouf.github.io/htv-project/ballots/${filename}`;
       try {
-        const response = await fetch(filePath);
+        const response = await fetch(url);
         if (!response.ok) throw new Error("Ballot not found.");
-
         const html = await response.text();
         const container = document.createElement('div');
         container.innerHTML = html;
+        container.style.width = '595px';
+        container.style.minHeight = '842px';
+        container.style.position = 'relative';
+        container.style.background = 'white';
         document.body.appendChild(container);
 
-        html2pdf().from(container).set({
-          margin: 10,
-          filename: `${electorate}-HTV-2025.pdf`,
-          html2canvas: { scale: 2, useCORS: true },
-          jsPDF: { format: 'a4', orientation: 'portrait' }
-        }).save().then(() => {
-          document.body.removeChild(container);
-        });
+        // Wait before rendering PDF to allow full layout
+        setTimeout(() => {
+          html2pdf().from(container).set({
+            margin: 0,
+            filename: `${electorate}-HTV-2025.pdf`,
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { format: 'a4', orientation: 'portrait' }
+          }).save().then(() => {
+            document.body.removeChild(container);
+          });
+        }, 1000);
       } catch (err) {
         alert("Could not load ballot: " + err.message);
         console.error(err);
