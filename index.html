@@ -162,6 +162,7 @@
       if (!electorate) return alert("Please select an electorate.");
       const filename = electorate.toLowerCase().replace(/\s+/g, '') + ".html";
       const url = `https://anthonykhallouf.github.io/htv-project/ballots/${filename}`;
+
       try {
         const response = await fetch(url);
         if (!response.ok) throw new Error("Ballot not found.");
@@ -169,16 +170,23 @@
 
         const wrapper = document.createElement('div');
         wrapper.innerHTML = html;
-        wrapper.style.width = '100%';
-        wrapper.style.height = '100%';
-        wrapper.style.display = 'flex';
-        wrapper.style.alignItems = 'center';
-        wrapper.style.justifyContent = 'center';
+
+        wrapper.style.width = "100%";
+        wrapper.style.height = "100%";
         wrapper.style.background = "url('https://iili.io/3GHYCMX.png') no-repeat center center";
-        wrapper.style.backgroundSize = 'cover';
+        wrapper.style.backgroundSize = "cover";
+        wrapper.style.display = "flex";
+        wrapper.style.justifyContent = "center";
+        wrapper.style.alignItems = "center";
+        wrapper.style.padding = "40px";
+
+        const inner = document.createElement('div');
+        inner.innerHTML = html;
+        wrapper.innerHTML = '';
+        wrapper.appendChild(inner);
 
         document.body.appendChild(wrapper);
-        await new Promise(resolve => setTimeout(resolve, 500)); // wait for DOM reflow
+        await new Promise(resolve => setTimeout(resolve, 500));
 
         html2pdf().from(wrapper).set({
           margin: 0,
@@ -188,6 +196,7 @@
         }).save().then(() => {
           document.body.removeChild(wrapper);
         });
+
       } catch (err) {
         alert("Could not load ballot: " + err.message);
         console.error(err);
