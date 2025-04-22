@@ -44,17 +44,20 @@
       display: flex; align-items: center; gap: 6px; box-shadow: 0 0 4px red;
     }
     .share-btn img { width: 18px; height: 18px; }
+    .test-btn {
+      background: red;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px;
+      color: white;
+      border: none;
+    }
     p { margin: 0; }
   </style>
 </head>
 <body>
   <div id="htv-generator">
-
-    <!-- ✅ TEST BUTTON -->
-    <button onclick="generateTestPDF()" style="background:red; color:white; font-weight:bold; padding:10px;">
-      🧪 Test PDF Download
-    </button>
-
+    <button class="test-btn" onclick="testPDF()">✏️ Test PDF Download</button>
     <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
       ❤️ Donate to support @ausvstheagenda
     </div>
@@ -91,23 +94,41 @@
           option.textContent = electorate;
           dropdown.appendChild(option);
         });
-        console.log("✅ Electorates loaded");
       } catch (err) {
         console.error("Error loading electorates:", err);
       }
     }
 
-    function generateTestPDF() {
-      const testDiv = document.createElement("div");
-      testDiv.innerHTML = "<h1>Hello PDF!</h1><p>This is a test to check html2pdf is working.</p>";
-      testDiv.style.background = "white";
-      testDiv.style.color = "black";
-      testDiv.style.padding = "20px";
-      testDiv.style.fontFamily = "Arial, sans-serif";
+    function testPDF() {
+      const test = document.createElement('div');
+      test.innerHTML = `<h2>Hello PDF!</h2><p>This is a test to check html2pdf is working.</p>`;
+      html2pdf().from(test).set({ margin: 10, filename: 'test-download.pdf' }).save();
+    }
 
-      html2pdf().from(testDiv).set({
+    function downloadPDF() {
+      const electorate = document.getElementById('electorate-select').value;
+      if (!electorate) return alert("Please select an electorate.");
+      const houseInfo = houseData[electorate];
+      if (!houseInfo || !houseInfo.preferences) return alert("No preference data found.");
+      const sortedPrefs = houseInfo.preferences.sort((a, b) => a.Preference - b.Preference);
+      const state = houseInfo.state;
+
+      const content = document.createElement('div');
+      content.style.width = '595px';
+      content.style.padding = '30px';
+      content.innerHTML = `
+        <h2 style="text-align:center;">How to Vote in ${electorate}</h2>
+        <h3>House Preferences</h3>
+        <ol>
+          ${sortedPrefs.map(c => `<li>${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}
+        </ol>
+        <div style="margin-top:40px;font-size:12px;text-align:center;border-top:1px solid black;padding-top:10px;">
+          Authorised by Anthony Khallouf for Australians vs The Agenda, 5 Denison Street, Hornsby NSW 2077
+        </div>
+      `;
+      html2pdf().from(content).set({
         margin: 10,
-        filename: 'test-download.pdf',
+        filename: `${electorate}-HTV-2025.pdf`,
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { format: 'a4', orientation: 'portrait' }
       }).save();
