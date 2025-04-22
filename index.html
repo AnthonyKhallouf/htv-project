@@ -70,78 +70,6 @@
     </div>
   </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTV Card Generator</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <style>
-    body { background-color: black; color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-    #htv-generator { max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
-    .donate-button {
-      background: linear-gradient(to bottom, #222 0%, #000 100%);
-      color: white; font-weight: bold; font-size: 14px;
-      border: 2px solid gold; border-radius: 12px; padding: 4px 10px;
-      box-shadow: 0 0 4px yellow; width: fit-content; margin: 0 auto;
-      animation: pulse 2s infinite;
-    }
-    .donate-button:hover { cursor: pointer; text-decoration: underline; }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 4px yellow; }
-      50% { box-shadow: 0 0 12px yellow; }
-      100% { box-shadow: 0 0 4px yellow; }
-    }
-    .countdown-timer { font-family: monospace; font-size: 14px; color: red; }
-    h2 { font-size: 22px; font-weight: bold; margin: 0; }
-    .shine-button, select {
-      background: linear-gradient(to bottom, #999 0%, #1a1a1a 100%);
-      color: white; font-weight: bold; font-size: 16px;
-      border: 2px solid red; border-radius: 12px; height: 48px;
-      padding: 0 12px; display: flex; justify-content: center; align-items: center;
-      width: 100%; box-shadow: 0 0 8px red;
-    }
-    .shine-button.aec-button { box-shadow: 0 0 4px red; }
-    .shine-button:hover {
-      background: linear-gradient(to bottom, #bbb 0%, #222 100%);
-      cursor: pointer;
-    }
-    .share-row { display: flex; justify-content: center; gap: 8px; }
-    .share-btn {
-      background: linear-gradient(to bottom, #222 0%, #000 100%);
-      border: 2px solid red; color: white; border-radius: 12px;
-      padding: 4px 10px; height: 40px; font-size: 14px; font-weight: bold;
-      display: flex; align-items: center; gap: 6px; box-shadow: 0 0 4px red;
-    }
-    .share-btn img { width: 18px; height: 18px; }
-    p { margin: 0; }
-  </style>
-</head>
-<body>
-  <div id="htv-generator">
-    <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
-      ❤️ Donate to support @ausvstheagenda
-    </div>
-    <div class="countdown-timer" id="countdownTimer">⏳ Loading...</div>
-    <h2>How to Vote in the 2025 Federal Election</h2>
-    <p>Click below to find your electorate using the AEC website:</p>
-    <a href="https://electorate.aec.gov.au/" target="_blank">
-      <button class="shine-button aec-button">🔍 <b>Open AEC Electorate Finder</b></button>
-    </a>
-    <p>Then select your electorate below:</p>
-    <select id="electorate-select">
-      <option value="">-- Select your electorate --</option>
-    </select>
-    <button class="shine-button" onclick="downloadPDF()">📥 View & Download HTV Card (PDF)</button>
-    <div class="share-row">
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share</button>
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share</button>
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share</button>
-    </div>
-  </div>
-
   <script>
     const houseURL = 'https://anthonykhallouf.github.io/htv-project/house-preferences-2025-FINAL.json';
     const senateURL = 'https://anthonykhallouf.github.io/htv-project/senate-preferences-2025-cleaned.json';
@@ -234,7 +162,5 @@
     loadPreferences();
     startCountdown();
   </script>
-</body>
-</html>
 </body>
 </html>
