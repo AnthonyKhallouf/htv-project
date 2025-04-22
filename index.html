@@ -93,17 +93,21 @@
     async function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) return alert("Please select an electorate.");
-      const filename = electorate.toLowerCase().replace(/\s+/g, '') + ".html";
-      const url = `https://anthonykhallouf.github.io/htv-project/ballots/${filename}`;
+
+      const fileName = electorate.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '') + '.html';
+      const filePath = `https://anthonykhallouf.github.io/htv-project/ballots/${fileName}`;
+
       try {
-        const response = await fetch(url);
+        const response = await fetch(filePath);
         if (!response.ok) throw new Error("Ballot not found.");
+
         const html = await response.text();
         const container = document.createElement('div');
         container.innerHTML = html;
         document.body.appendChild(container);
+
         html2pdf().from(container).set({
-          margin: 0,
+          margin: 10,
           filename: `${electorate}-HTV-2025.pdf`,
           html2canvas: { scale: 2, useCORS: true },
           jsPDF: { format: 'a4', orientation: 'portrait' }
