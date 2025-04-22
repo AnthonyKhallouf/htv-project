@@ -1,237 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>House of Representatives Ballot Paper</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #E6F8E2; /* Light green background */
-      color: black;
-      padding: 20px;
-      width: 595px; /* Standard A4 width */
-      margin: 0 auto;
-      background-image: url('https://iili.io/3GHYCMX.png'); /* Set background image */
-      background-size: cover; /* Ensure the image covers the entire page */
-      background-position: center; /* Center the image */
-    }
-
-    .logo {
-      text-align: center;
-      margin-bottom: -30px; /* Further reduced space between the logo and box */
-    }
-
-    .logo img {
-      width: 100%; /* Stretch the logo to fit the container width */
-      height: auto; /* Maintain aspect ratio */
-      max-width: 595px; /* Ensure it does not exceed the container width */
-    }
-
-    .ballot-container {
-      margin-top: 10px; /* Reduced space between logo and box */
-      padding: 10px;
-      border: 1px solid black;
-      background-color: #E6F8E2; /* Light green background */
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    .ballot-header {
-      text-align: center;
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .state,
-    .electorate-name,
-    .instructions {
-      text-align: center;
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0; /* Set margin to zero for tight spacing */
-    }
-
-    .state {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 2px; /* Reduced space between "New South Wales" and "Electoral Division of Berowra" */
-    }
-
-    .electorate-name {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 10px; /* Adjusted spacing */
-    }
-
-    .instructions {
-      font-size: 16px;
-      margin-top: 20px;
-      font-weight: normal; /* Unbolded the instruction heading */
-    }
-
-    .number-box {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      border: 2px solid black;
-      background-color: transparent; /* Transparent background */
-      color: black;
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 40px;
-      margin-right: 10px;
-      border-radius: 5px;
-    }
-
-    .ballot-option {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .ballot-option div {
-      margin-left: 10px;
-    }
-
-    .name-party {
-      font-size: 16px;
-      line-height: 1.4;
-    }
-
-    .name-party b {
-      font-weight: bold; /* Ensures the names are bold */
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 14px;
-      margin-top: 40px;
-      border-top: 1px solid black;
-      padding-top: 10px;
-    }
-
-    .authorised-box {
-      background-color: black;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 12px; /* Reduced font size to fit text on one line */
-      font-weight: normal;
-      margin-top: 10px; /* Reduced space from the ballot content */
-      white-space: nowrap; /* Ensures text stays on a single line */
-    }
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="https://iili.io/3G94TVS.png" alt="Australians vs The Agenda" />
-  </div>
-
-  <div class="ballot-container">
-    <!-- Corrected header to match the exact style -->
- 
-   <div class="state">
-  ACT
-</div>
-
-<div class="electorate-name">
-  Electoral Division of Canberra
-</div>
-
-<!-- Instructions Section -->
-<div class="instructions">
-  <p>Number the boxes from 1 to 6 in the order of your choice.</p>
-</div>
-
-    <!-- Ballot Options Section -->
-    <div class="ballot-options">
-      <!-- Option 1 -->
-      <div class="ballot-option">
-        <div class="number-box">6</div>
-        <div class="name-party">
-          <b>COUSINS, Martin</b> <br />
-          The Greens
-        </div>
-      </div>
-
-      <!-- Option 2 -->
-      <div class="ballot-option">
-        <div class="number-box">1</div>
-        <div class="name-party">
-          <b>MATTINSON, Gerald</b> <br />
-          Pauline Hanson's One Nation
-        </div>
-      </div>
-
-      <!-- Option 3 -->
-      <div class="ballot-option">
-        <div class="number-box">7</div>
-        <div class="name-party">
-          <b>KOSCHINSKI, Benson</b> <br />
-          Labor
-        </div>
-      </div>
-
-      <!-- Option 4 -->
-      <div class="ballot-option">
-        <div class="number-box">3</div>
-        <div class="name-party">
-          <b>WOODWARD, Roger</b> <br />
-          Independent
-        </div>
-      </div>
-
-      <!-- Option 5 -->
-      <div class="ballot-option">
-        <div class="number-box">5</div>
-        <div class="name-party">
-          <b>CLARKE, Brendan Michael</b> <br />
-          FUSION | Planet Rescue | Whistleblower Protection | Innovation
-        </div>
-      </div>
-
-      <!-- Option 6 -->
-      <div class="ballot-option">
-        <div class="number-box">4</div>
-        <div class="name-party">
-          <b>BROWN, Tina</b> <br />
-          Independent
-        </div>
-      </div>
-
-      <!-- Option 7 -->
-      <div class="ballot-option">
-        <div class="number-box">2</div>
-        <div class="name-party">
-          <b>BASTIAN, Stephen</b> <br />
-          Trumpet of Patriots
-        </div>
-      </div>
-
-      <!-- Option 8 -->
-      <div class="ballot-option">
-        <div class="number-box">8</div>
-        <div class="name-party">
-          <b>LEESER, Julian</b> <br />
-          Liberal
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Authorised By Box -->
-  <div class="authorised-box">
-    Authorised by Anthony Khallouf for Australians vs. The Agenda, 5 Denison Street, Hornsby NSW 2077
-  </div>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Canberra Ballot&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: black;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: black;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ballot-wrapper {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e6f2e6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 40px auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 6px solid red;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 420px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.state {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: -12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.electorate {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.instruction {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.preference {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.number {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 36px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 36px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid black;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-right: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.candidate {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.2;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.authorisation {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: black;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ballot-wrapper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;img alt="Australians vs The Agenda" src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="state" style="margin-bottom: 6px;"&gt;Australian Capital Territory&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="electorate"&gt;Electoral Division of Canberra&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="instruction"&gt;Number the boxes from 1 to 6 in the order of your choice.&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preference"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="number"&gt;1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="candidate"&gt;&lt;strong&gt;ROCHE, Will&lt;/strong&gt;&lt;br/&gt;Liberal&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preference"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="number"&gt;2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="candidate"&gt;&lt;strong&gt;LIDDICOAT, Mary-Jane&lt;/strong&gt;&lt;br/&gt;HEART Party&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preference"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="number"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="candidate"&gt;&lt;strong&gt;MILES, Claire&lt;/strong&gt;&lt;br/&gt;Independent&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preference"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="number"&gt;4&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="candidate"&gt;&lt;strong&gt;McTAGGART, Teresa&lt;/strong&gt;&lt;br/&gt;AJP&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preference"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="number"&gt;5&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="candidate"&gt;&lt;strong&gt;MUDFORD, Isabel&lt;/strong&gt;&lt;br/&gt;Australian Greens&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="preference"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="number"&gt;6&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="candidate"&gt;&lt;strong&gt;PAYNE, Alicia&lt;/strong&gt;&lt;br/&gt;Australian Labor Party&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="authorisation"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Authorised by Anthony Khallouf for Australians vs. The Agenda, Hornsby NSW 2077</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>

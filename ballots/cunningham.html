@@ -1,237 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>House of Representatives Ballot Paper</title>
+  <meta charset="utf-8"/>
+  <title>Cunningham Ballot</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #E6F8E2; /* Light green background */
+      background: black;
       color: black;
-      padding: 20px;
-      width: 595px; /* Standard A4 width */
-      margin: 0 auto;
-      background-image: url('https://iili.io/3GHYCMX.png'); /* Set background image */
-      background-size: cover; /* Ensure the image covers the entire page */
-      background-position: center; /* Center the image */
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
     }
-
+    .ballot-wrapper {
+      background: #e6f2e6;
+      width: 800px;
+      margin: 40px auto;
+      padding: 20px 40px;
+      border: 6px solid red;
+      border-radius: 10px;
+    }
     .logo {
       text-align: center;
-      margin-bottom: -30px; /* Further reduced space between the logo and box */
     }
-
     .logo img {
-      width: 100%; /* Stretch the logo to fit the container width */
-      height: auto; /* Maintain aspect ratio */
-      max-width: 595px; /* Ensure it does not exceed the container width */
+      width: 420px;
+      margin-bottom: 12px;
     }
-
-    .ballot-container {
-      margin-top: 10px; /* Reduced space between logo and box */
-      padding: 10px;
-      border: 1px solid black;
-      background-color: #E6F8E2; /* Light green background */
+    .state {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: -12px;
     }
-
-    h2 {
+    .electorate {
       text-align: center;
       font-size: 22px;
       font-weight: bold;
-      margin: 10px 0;
+      margin-bottom: 8px;
     }
-
-    .ballot-header {
+    .instruction {
       text-align: center;
-      font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
-
-    .state,
-    .electorate-name,
-    .instructions {
-      text-align: center;
-      font-size: 16px;
-      font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 0; /* Set margin to zero for tight spacing */
+    .preference {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
     }
-
-    .state {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 2px; /* Reduced space between "New South Wales" and "Electoral Division of Berowra" */
-    }
-
-    .electorate-name {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 0;
-      margin-bottom: 10px; /* Adjusted spacing */
-    }
-
-    .instructions {
-      font-size: 16px;
-      margin-top: 20px;
-      font-weight: normal; /* Unbolded the instruction heading */
-    }
-
-    .number-box {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
+    .number {
+      width: 36px;
+      height: 36px;
       border: 2px solid black;
-      background-color: transparent; /* Transparent background */
-      color: black;
-      font-size: 24px;
+      border-radius: 8px;
       font-weight: bold;
-      text-align: center;
-      line-height: 40px;
-      margin-right: 10px;
-      border-radius: 5px;
-    }
-
-    .ballot-option {
+      font-size: 18px;
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      justify-content: center;
+      margin-right: 14px;
     }
-
-    .ballot-option div {
-      margin-left: 10px;
+    .candidate {
+      line-height: 1.2;
     }
-
-    .name-party {
-      font-size: 16px;
-      line-height: 1.4;
-    }
-
-    .name-party b {
-      font-weight: bold; /* Ensures the names are bold */
-    }
-
-    .footer {
+    .authorisation {
+      background: white;
+      color: black;
+      font-size: 12px;
+      padding: 8px;
+      margin-top: 20px;
       text-align: center;
-      font-size: 14px;
-      margin-top: 40px;
-      border-top: 1px solid black;
-      padding-top: 10px;
+      border-radius: 4px;
     }
-
-    .authorised-box {
-      background-color: black;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 12px; /* Reduced font size to fit text on one line */
-      font-weight: normal;
-      margin-top: 10px; /* Reduced space from the ballot content */
-      white-space: nowrap; /* Ensures text stays on a single line */
-    }
-
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="https://iili.io/3G94TVS.png" alt="Australians vs The Agenda" />
-  </div>
-
-  <div class="ballot-container">
-    <!-- Corrected header to match the exact style -->
- 
-   <div class="state">
-  NSW
-</div>
-
-<div class="electorate-name">
-  Electoral Division of Cunningham
-</div>
-
-<!-- Instructions Section -->
-<div class="instructions">
-  <p>Number the boxes from 1 to 6 in the order of your choice.</p>
-</div>
-
-    <!-- Ballot Options Section -->
-    <div class="ballot-options">
-      <!-- Option 1 -->
-      <div class="ballot-option">
-        <div class="number-box">6</div>
-        <div class="name-party">
-          <b>COUSINS, Martin</b> <br />
-          The Greens
-        </div>
-      </div>
-
-      <!-- Option 2 -->
-      <div class="ballot-option">
-        <div class="number-box">1</div>
-        <div class="name-party">
-          <b>MATTINSON, Gerald</b> <br />
-          Pauline Hanson's One Nation
-        </div>
-      </div>
-
-      <!-- Option 3 -->
-      <div class="ballot-option">
-        <div class="number-box">7</div>
-        <div class="name-party">
-          <b>KOSCHINSKI, Benson</b> <br />
-          Labor
-        </div>
-      </div>
-
-      <!-- Option 4 -->
-      <div class="ballot-option">
-        <div class="number-box">3</div>
-        <div class="name-party">
-          <b>WOODWARD, Roger</b> <br />
-          Independent
-        </div>
-      </div>
-
-      <!-- Option 5 -->
-      <div class="ballot-option">
-        <div class="number-box">5</div>
-        <div class="name-party">
-          <b>CLARKE, Brendan Michael</b> <br />
-          FUSION | Planet Rescue | Whistleblower Protection | Innovation
-        </div>
-      </div>
-
-      <!-- Option 6 -->
-      <div class="ballot-option">
-        <div class="number-box">4</div>
-        <div class="name-party">
-          <b>BROWN, Tina</b> <br />
-          Independent
-        </div>
-      </div>
-
-      <!-- Option 7 -->
-      <div class="ballot-option">
-        <div class="number-box">2</div>
-        <div class="name-party">
-          <b>BASTIAN, Stephen</b> <br />
-          Trumpet of Patriots
-        </div>
-      </div>
-
-      <!-- Option 8 -->
-      <div class="ballot-option">
-        <div class="number-box">8</div>
-        <div class="name-party">
-          <b>LEESER, Julian</b> <br />
-          Liberal
-        </div>
-      </div>
+  <div class="ballot-wrapper">
+    <div class="logo">
+      <img alt="Australians vs The Agenda" src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG"/>
     </div>
-  </div>
+    <div class="state" style="margin-bottom: 6px;">New South Wales</div>
+    <div class="electorate">Electoral Division of Cunningham</div>
+    <div class="instruction">Number the boxes from 1 to 6 in the order of your choice.</div>
 
-  <!-- Authorised By Box -->
-  <div class="authorised-box">
-    Authorised by Anthony Khallouf for Australians vs. The Agenda, 5 Denison Street, Hornsby NSW 2077
+    <div class="preference">
+      <div class="number">1</div>
+      <div class="candidate"><strong>FULLER, John</strong><br/>Pauline Hanson's One Nation</div>
+    </div>
+    <div class="preference">
+      <div class="number">2</div>
+      <div class="candidate"><strong>IVANEZA, Amanda</strong><br/>Liberal</div>
+    </div>
+    <div class="preference">
+      <div class="number">3</div>
+      <div class="candidate"><strong>GARNAUT-MILLER, Alexis</strong><br/>Citizens Party</div>
+    </div>
+    <div class="preference">
+      <div class="number">4</div>
+      <div class="candidate"><strong>LAVERS, Tim</strong><br/>Animal Justice Party</div>
+    </div>
+    <div class="preference">
+      <div class="number">5</div>
+      <div class="candidate"><strong>WHITTAKER, Jess</strong><br/>The Greens</div>
+    </div>
+    <div class="preference">
+      <div class="number">6</div>
+      <div class="candidate"><strong>BYRNES, Alison</strong><br/>Labor</div>
+    </div>
+
+    <div class="authorisation">
+      Authorised by Anthony Khallouf for Australians vs. The Agenda, Hornsby NSW 2077
+    </div>
   </div>
 </body>
 </html>
