@@ -166,51 +166,24 @@
         const response = await fetch(url);
         if (!response.ok) throw new Error("Ballot not found.");
         const html = await response.text();
-        const iframeHTML = `
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta charset="UTF-8" />
-            <style>
-              body {
-                margin: 0;
-                padding: 0;
-                width: 595px;
-                min-height: 842px;
-                background-color: #E6F8E2;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-              }
-            </style>
-          </head>
-          <body>
-            ${html}
-          </body>
-          </html>
-        `;
+        const wrapper = document.createElement('div');
+        wrapper.style.background = 'black';
+        wrapper.style.display = 'flex';
+        wrapper.style.justifyContent = 'center';
+        wrapper.style.alignItems = 'center';
+        wrapper.style.height = '100vh';
+        wrapper.innerHTML = html;
+        document.body.appendChild(wrapper);
+        await new Promise(resolve => setTimeout(resolve, 500)); // allow DOM to fully render
 
-        const blob = new Blob([iframeHTML], { type: 'text/html' });
-        const blobURL = URL.createObjectURL(blob);
-        const iframe = document.createElement('iframe');
-        iframe.style.width = '595px';
-        iframe.style.height = '842px';
-        iframe.style.position = 'absolute';
-        iframe.style.left = '-9999px';
-        iframe.src = blobURL;
-        document.body.appendChild(iframe);
-
-        iframe.onload = () => {
-          html2pdf().from(iframe.contentDocument.body).set({
-            margin: 0,
-            filename: `${electorate}-HTV-2025.pdf`,
-            html2canvas: { scale: 2, useCORS: true },
-            jsPDF: { format: 'a4', orientation: 'portrait' }
-          }).save().then(() => {
-            document.body.removeChild(iframe);
-            URL.revokeObjectURL(blobURL);
-          });
-        };
+        html2pdf().from(wrapper).set({
+          margin: 0,
+          filename: `${electorate}-HTV-2025.pdf`,
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { format: 'a4', orientation: 'portrait' }
+        }).save().then(() => {
+          document.body.removeChild(wrapper);
+        });
       } catch (err) {
         alert("Could not load ballot: " + err.message);
         console.error(err);
