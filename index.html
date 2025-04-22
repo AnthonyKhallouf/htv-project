@@ -166,24 +166,29 @@
         const response = await fetch(url);
         if (!response.ok) throw new Error("Ballot not found.");
         const html = await response.text();
-        const wrapper = document.createElement('div');
-        wrapper.style.background = 'black';
-        wrapper.style.display = 'flex';
-        wrapper.style.justifyContent = 'center';
-        wrapper.style.alignItems = 'center';
-        wrapper.style.height = '100vh';
-        wrapper.innerHTML = html;
-        document.body.appendChild(wrapper);
-        await new Promise(resolve => setTimeout(resolve, 500)); // allow DOM to fully render
 
-        html2pdf().from(wrapper).set({
-          margin: 0,
-          filename: `${electorate}-HTV-2025.pdf`,
-          html2canvas: { scale: 2, useCORS: true },
-          jsPDF: { format: 'a4', orientation: 'portrait' }
-        }).save().then(() => {
-          document.body.removeChild(wrapper);
-        });
+        const iframe = document.createElement('iframe');
+        iframe.style.position = 'fixed';
+        iframe.style.top = '-9999px';
+        iframe.style.left = '-9999px';
+        iframe.width = '794'; // A4 width in pixels at 96dpi
+        iframe.height = '1123'; // A4 height in pixels at 96dpi
+        document.body.appendChild(iframe);
+
+        iframe.contentDocument.open();
+        iframe.contentDocument.write(html);
+        iframe.contentDocument.close();
+
+        iframe.onload = () => {
+          html2pdf().from(iframe.contentDocument.body).set({
+            margin: 0,
+            filename: `${electorate}-HTV-2025.pdf`,
+            html2canvas: { scale: 2, useCORS: true },
+            jsPDF: { format: 'a4', orientation: 'portrait' }
+          }).save().then(() => {
+            document.body.removeChild(iframe);
+          });
+        };
       } catch (err) {
         alert("Could not load ballot: " + err.message);
         console.error(err);
