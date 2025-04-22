@@ -49,6 +49,12 @@
 </head>
 <body>
   <div id="htv-generator">
+
+    <!-- ✅ TEST BUTTON -->
+    <button onclick="generateTestPDF()" style="background:red; color:white; font-weight:bold; padding:10px;">
+      🧪 Test PDF Download
+    </button>
+
     <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
       ❤️ Donate to support @ausvstheagenda
     </div>
@@ -91,6 +97,22 @@
       }
     }
 
+    function generateTestPDF() {
+      const testDiv = document.createElement("div");
+      testDiv.innerHTML = "<h1>Hello PDF!</h1><p>This is a test to check html2pdf is working.</p>";
+      testDiv.style.background = "white";
+      testDiv.style.color = "black";
+      testDiv.style.padding = "20px";
+      testDiv.style.fontFamily = "Arial, sans-serif";
+
+      html2pdf().from(testDiv).set({
+        margin: 10,
+        filename: 'test-download.pdf',
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { format: 'a4', orientation: 'portrait' }
+      }).save();
+    }
+
     function startCountdown() {
       const countdownElement = document.getElementById("countdownTimer");
       const electionDate = new Date("2025-05-03T00:00:00+10:00");
@@ -112,7 +134,6 @@
       updateCountdown();
     }
 
-    // INIT
     loadElectorates();
     startCountdown();
   </script>
