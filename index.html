@@ -162,33 +162,32 @@
       if (!electorate) return alert("Please select an electorate.");
       const filename = electorate.toLowerCase().replace(/\s+/g, '') + ".html";
       const url = `https://anthonykhallouf.github.io/htv-project/ballots/${filename}`;
-
       try {
-        const iframe = document.createElement('iframe');
-        iframe.style.position = 'fixed';
-        iframe.style.left = '-9999px';
-        iframe.style.top = '-9999px';
-        document.body.appendChild(iframe);
-
-        iframe.onload = async () => {
-          const doc = iframe.contentDocument || iframe.contentWindow.document;
-          await new Promise(resolve => setTimeout(resolve, 500));
-          html2pdf().from(doc.body).set({
-            margin: 0,
-            filename: `${electorate}-HTV-2025.pdf`,
-            html2canvas: { scale: 2, useCORS: true },
-            jsPDF: { format: 'a4', orientation: 'portrait' }
-          }).save().then(() => {
-            document.body.removeChild(iframe);
-          });
-        };
-
         const response = await fetch(url);
+        if (!response.ok) throw new Error("Ballot not found.");
         const html = await response.text();
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        doc.open();
-        doc.write(html);
-        doc.close();
+
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = html;
+        wrapper.style.width = '100%';
+        wrapper.style.height = '100%';
+        wrapper.style.display = 'flex';
+        wrapper.style.alignItems = 'center';
+        wrapper.style.justifyContent = 'center';
+        wrapper.style.background = "url('https://iili.io/3GHYCMX.png') no-repeat center center";
+        wrapper.style.backgroundSize = 'cover';
+
+        document.body.appendChild(wrapper);
+        await new Promise(resolve => setTimeout(resolve, 500)); // wait for DOM reflow
+
+        html2pdf().from(wrapper).set({
+          margin: 0,
+          filename: `${electorate}-HTV-2025.pdf`,
+          html2canvas: { scale: 2, useCORS: true },
+          jsPDF: { format: 'a4', orientation: 'portrait' }
+        }).save().then(() => {
+          document.body.removeChild(wrapper);
+        });
       } catch (err) {
         alert("Could not load ballot: " + err.message);
         console.error(err);
