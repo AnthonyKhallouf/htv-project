@@ -167,22 +167,19 @@
         if (!response.ok) throw new Error("Ballot not found.");
         const html = await response.text();
         const wrapper = document.createElement('div');
-        wrapper.style.background = 'black';
-        wrapper.style.color = 'white';
-        wrapper.style.display = 'flex';
-        wrapper.style.justifyContent = 'center';
-        wrapper.style.alignItems = 'center';
-        wrapper.style.minHeight = '100vh';
-        wrapper.innerHTML = `
-          <div style="background: black; padding: 40px 20px; text-align: center; width: 100%;">
-            <div style="margin: 0 auto; display: inline-block;">
-              ${html}
-            </div>
-            <div style="background: white; color: black; font-size: 12px; padding: 8px 12px; margin-top: 20px; display: inline-block;">
-              Authorised by Anthony Khallouf for Australians vs. The Agenda, 5 Denison Street, Hornsby NSW 2077
-            </div>
-          </div>
-        `;
+        wrapper.innerHTML = html;
+        wrapper.style.backgroundColor = "black";
+        wrapper.style.display = "flex";
+        wrapper.style.justifyContent = "center";
+        wrapper.style.alignItems = "center";
+        wrapper.style.height = "100vh";
+
+        const authBox = wrapper.querySelector('.authorisation');
+        if (authBox) {
+          authBox.style.backgroundColor = "white";
+          authBox.style.color = "black";
+        }
+
         document.body.appendChild(wrapper);
         await new Promise(resolve => setTimeout(resolve, 500));
 
