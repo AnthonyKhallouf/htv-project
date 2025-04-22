@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTV Card Generator</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   HTV Card Generator
+  </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js">
+  </script>
   <style>
-    body { background-color: black; color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+   body { background-color: black; color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; }
     #htv-generator { max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
     .donate-button {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
@@ -46,121 +50,55 @@
     .share-btn img { width: 18px; height: 18px; }
     p { margin: 0; }
   </style>
-</head>
-<body>
+ </head>
+ <body>
+  <!-- The HTML will be adjusted in the next step -->
   <div id="htv-generator">
-    <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
-      ❤️ Donate to support @ausvstheagenda
-    </div>
-    <div class="countdown-timer" id="countdownTimer">⏳ Loading...</div>
-    <h2>How to Vote in the 2025 Federal Election</h2>
-    <p>Click below to find your electorate using the AEC website:</p>
-    <a href="https://electorate.aec.gov.au/" target="_blank">
-      <button class="shine-button aec-button">🔍 <b>Open AEC Electorate Finder</b></button>
-    </a>
-    <p>Then select your electorate below:</p>
-    <select id="electorate-select">
-      <option value="">-- Select your electorate --</option>
-    </select>
-    <button class="shine-button" onclick="downloadPDF()">📥 View & Download HTV Card (PDF)</button>
-    <div class="share-row">
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share</button>
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share</button>
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share</button>
-    </div>
+   <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
+    ❤️ Donate to support @ausvstheagenda
+   </div>
+   <div class="countdown-timer" id="countdownTimer">
+    ⏳ Loading...
+   </div>
+   <h2>
+    How to Vote in the 2025 Federal Election
+   </h2>
+   <p>
+    Click below to find your electorate using the AEC website:
+   </p>
+   <a href="https://electorate.aec.gov.au/" target="_blank">
+    <button class="shine-button aec-button">
+     🔍
+     <b>
+      Open AEC Electorate Finder
+     </b>
+    </button>
+   </a>
+   <p>
+    Then select your electorate below:
+   </p>
+   <select id="electorate-select">
+    <option value="">
+     -- Select your electorate --
+    </option>
+   </select>
+   <button class="shine-button" onclick="downloadPDF()">
+    📥 View &amp; Download HTV Card (PDF)
+   </button>
+   <div class="share-row">
+    <button class="share-btn">
+     <img alt="Twitter" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"/>
+     Share
+    </button>
+    <button class="share-btn">
+     <img alt="Facebook" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"/>
+     Share
+    </button>
+    <button class="share-btn">
+     <img alt="Telegram" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"/>
+     Share
+    </button>
+   </div>
   </div>
-
-  <script>
-    const houseURL = 'https://anthonykhallouf.github.io/htv-project/house-preferences-2025-FINAL.json';
-    const senateURL = 'https://anthonykhallouf.github.io/htv-project/senate-preferences-2025-cleaned.json';
-    let houseData = {}, senateData = {};
-
-    async function loadPreferences() {
-      try {
-        houseData = await (await fetch(houseURL)).json();
-        senateData = await (await fetch(senateURL)).json();
-        const dropdown = document.getElementById('electorate-select');
-        Object.keys(houseData).sort().forEach(electorate => {
-          const opt = document.createElement('option');
-          opt.value = electorate;
-          opt.textContent = electorate;
-          dropdown.appendChild(opt);
-        });
-        console.log("✅ Loaded data successfully");
-      } catch (error) {
-        alert("Failed to load How to Vote data.");
-        console.error(error);
-      }
-    }
-
-    async function downloadPDF() {
-      const electorate = document.getElementById('electorate-select').value;
-      if (!electorate) return alert("Please select an electorate.");
-      const houseInfo = houseData[electorate];
-      if (!houseInfo) return alert(`House data not found for ${electorate}`);
-      const housePrefs = houseInfo.preferences.slice().sort((a, b) => a.Preference - b.Preference);
-      const state = houseInfo.state;
-      if (!state) return alert(`No state listed for ${electorate}`);
-      const senatePrefs = senateData[state];
-      if (!senatePrefs || !Array.isArray(senatePrefs)) {
-        return alert(`Senate preferences not found for state: ${state}`);
-      }
-
-      const pdfContent = document.createElement('div');
-      pdfContent.style.position = 'static';
-      pdfContent.style.background = 'white';
-      pdfContent.style.color = 'black';
-      pdfContent.style.padding = '30px';
-      pdfContent.style.width = '595px';
-      pdfContent.style.minHeight = '842px';
-      pdfContent.style.fontSize = '14px';
-      pdfContent.innerHTML = `
-        <h2>How to Vote in ${electorate}</h2>
-        <h3>House Preferences</h3>
-        <ol>
-  ${housePrefs.map((c, i) => `<li>Preference ${i + 1}: ${c.Surname}, ${c.Name} (${c.Party})</li>`).join('')}
-</ol>
-        <h3>Senate Preferences (${state})</h3>
-        <ol>${senatePrefs.map(c => `<li>Group ${c.Group}: ${c.Party} (Preference ${c.Preference})</li>`).join('')}</ol>
-      `;
-      document.body.appendChild(pdfContent);
-
-      // Wait longer for proper DOM reflow and font rendering
-      setTimeout(() => {
-        html2pdf().from(pdfContent).set({
-          margin: 10,
-          filename: `${electorate}-HTV-2025.pdf`,
-          html2canvas: { scale: 2, useCORS: true },
-          jsPDF: { format: 'a4', orientation: 'portrait' }
-        }).save().then(() => {
-          document.body.removeChild(pdfContent);
-        });
-      }, 800);
-    }
-
-    function startCountdown() {
-      const countdownElement = document.getElementById("countdownTimer");
-      const electionDate = new Date("2025-05-03T00:00:00+10:00");
-      function updateCountdown() {
-        const now = new Date();
-        const diff = electionDate - now;
-        if (diff <= 0) {
-          countdownElement.textContent = "🗳️ Election Day is here!";
-          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
-          return;
-        }
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-        countdownElement.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Election Day`;
-        setTimeout(updateCountdown, 1000);
-      }
-      updateCountdown();
-    }
-
-    loadPreferences();
-    startCountdown();
-  </script>
-</body>
+ </body>
 </html>
