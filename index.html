@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>HTV Card Generator</title>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
@@ -15,6 +15,7 @@
       text-align: center;
       margin: 0;
       height: 100%;
+      overscroll-behavior: none;
     }
     body {
       display: flex;
@@ -114,7 +115,7 @@
       margin: 0;
     }
     .subtext {
-      font-size: 14px;
+      font-size: 13px;
     }
   </style>
 </head>
