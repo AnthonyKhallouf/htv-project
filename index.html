@@ -1,225 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>HTV Card Generator</title>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NSW Senate Ballot</title>
   <style>
+    @page { size: A4 landscape; margin: 0; }
     html, body {
-      background-color: black;
-      color: white;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
       font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
+      width: 100%;
       height: 100%;
-      overscroll-behavior-y: contain;
     }
-    body {
+    .page-wrapper {
+      width: 100%;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+    }
+    .ballot-container {
+      border: 4px solid black;
+      background: #f2f2f2;
       padding: 20px;
+      width: 95%;
+      box-sizing: border-box;
     }
-    #htv-generator {
-      max-width: 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      width: 100%;
-    }
-    .donate-button {
-      background: linear-gradient(to bottom, #222 0%, #000 100%);
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-      border: 2px solid gold;
-      border-radius: 12px;
-      padding: 4px 10px;
-      box-shadow: 0 0 4px yellow;
-      width: fit-content;
-      margin: 0 auto;
-      animation: pulse 2s infinite;
-    }
-    .donate-button:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 4px yellow; }
-      50% { box-shadow: 0 0 12px yellow; }
-      100% { box-shadow: 0 0 4px yellow; }
-    }
-    .countdown-timer {
-      font-family: monospace;
-      font-size: 14px;
-      color: red;
-    }
-    h2 {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 0;
-      white-space: normal;
-    }
-    .shine-button,
-    select {
-      background: linear-gradient(to bottom, #999 0%, #1a1a1a 100%);
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      border: 2px solid red;
-      border-radius: 12px;
-      height: 48px;
-      padding: 0 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      box-shadow: 0 0 8px red;
+    .logo {
       text-align: center;
-      text-align-last: center;
+      margin-bottom: 10px;
     }
-    .shine-button.aec-button {
-      box-shadow: 0 0 4px red;
+    .logo img {
+      width: 260px;
     }
-    .shine-button:hover {
-      background: linear-gradient(to bottom, #bbb 0%, #222 100%);
-      cursor: pointer;
+    .instruction-header {
+      color: red;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      margin: 0 auto 6px auto;
+      max-width: 100%;
     }
-    .share-row {
+    .below-line-bar {
+      background: black;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      margin: 8px auto 20px auto;
+      font-size: 16px;
+      max-width: 100%;
+    }
+    .columns {
       display: flex;
       justify-content: center;
-      gap: 8px;
+      flex-wrap: nowrap;
+      gap: 10px;
+      overflow: hidden;
     }
-    .share-btn {
-      background: linear-gradient(to bottom, #222 0%, #000 100%);
-      border: 2px solid red;
-      color: white;
-      border-radius: 9999px;
-      padding: 6px 14px;
-      font-size: 14px;
+    .column {
+      background: white;
+      border: 3px solid black;
+      text-align: center;
+      width: 110px;
+      padding: 8px 4px;
+      box-sizing: border-box;
+    }
+    .column-label {
       font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 0 4px red;
+      margin-bottom: 4px;
     }
-    .share-btn img {
-      width: 18px;
-      height: 18px;
+    .preference-box {
+      border: 2px solid black;
+      display: inline-block;
+      font-weight: bold;
+      padding: 6px 12px;
+      font-size: 16px;
+      margin-bottom: 6px;
+      min-width: 24px;
     }
-    p {
-      margin: 0;
+    .party-name {
+      font-weight: bold;
+      font-size: 12px;
     }
-    .subtext {
-      font-size: 13px;
+    .authorisation {
+      background: white;
+      color: black;
+      font-size: 12px;
+      text-align: center;
+      padding: 10px 20px;
+      max-width: fit-content;
+      margin: 30px auto 10px auto;
+      border-radius: 8px;
+    }
+    .merch-button {
+      background: linear-gradient(to bottom, #444, #111);
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      border: 2px solid white;
+      border-radius: 20px;
+      padding: 6px 14px;
+      box-shadow: 0 0 6px white;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px auto 0 auto;
+    }
+    .merch-button:hover {
+      background: linear-gradient(to bottom, #666, #222);
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div id="htv-generator">
-    <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
-      ❤️ Donate to support @ausvstheagenda
+<div class="page-wrapper">
+  <div class="ballot-container">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG" alt="Australians vs The Agenda logo">
     </div>
-    <div class="countdown-timer" id="countdownTimer">⏳ Loading...</div>
-    <h2>How to Vote in the 2025 Federal Election</h2>
-    <p class="subtext">Click below to find your electorate using the AEC website:</p>
-    <a href="https://electorate.aec.gov.au/" target="_blank">
-      <button class="shine-button aec-button">🔍 <b>Open AEC Electorate Finder</b></button>
-    </a>
-    <p>Then select your electorate below:</p>
-    <select id="electorate-select">
-      <option value="">-- Select your electorate --</option>
-    </select>
-    <button class="shine-button" onclick="trackDownloadAndDownloadPDF()">📥 View & Download HTV Card (PDF)</button>
-    <div class="share-row">
-      <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=Check+out+the+HTV+Card+Generator+by+%40ausvstheagenda+here:+https://htv.australiansvstheagenda.com.au', '_blank')">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share
-      </button>
-      <button class="share-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://htv.australiansvstheagenda.com.au', '_blank')">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share
-      </button>
-      <button class="share-btn" onclick="window.open('https://t.me/share/url?url=https://htv.australiansvstheagenda.com.au&text=Check+out+the+HTV+Card+Generator+by+%40ausvstheagenda', '_blank')">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share
-      </button>
+    <div class="instruction-header">
+      Note: If you want to avoid preferencing minor left parties above Labor, stop your preferences after Liberal/National.
+    </div>
+    <div class="columns">
+      <div class="column"><div class="column-label">C</div><div class="preference-box">11</div><div class="party-name">Australia's Voice</div></div>
+      <div class="column"><div class="column-label">D</div><div class="preference-box">10</div><div class="party-name">FUSION | Planet Rescue | Whistleblower Protection | Innovation</div></div>
+      <div class="column"><div class="column-label">E</div><div class="preference-box">3</div><div class="party-name">Family First</div></div>
+      <div class="column"><div class="column-label">F</div><div class="preference-box">2</div><div class="party-name">Pauline Hanson's One Nation</div></div>
+      <div class="column"><div class="column-label">H</div><div class="preference-box">4</div><div class="party-name">Australian Christians</div></div>
+      <div class="column"><div class="column-label">I</div><div class="preference-box">1</div><div class="party-name">Libertarian / HEART / Gerard Rennick People First</div></div>
+      <div class="column"><div class="column-label">J</div><div class="preference-box">8</div><div class="party-name">Legalise Cannabis Party</div></div>
+      <div class="column"><div class="column-label">M</div><div class="preference-box">5</div><div class="party-name">Trumpet of Patriots</div></div>
+      <div class="column"><div class="column-label">N</div><div class="preference-box">7</div><div class="party-name">Liberal & Nationals</div></div>
+      <div class="column"><div class="column-label">O</div><div class="preference-box">9</div><div class="party-name">Jacqui Lambie Network</div></div>
+      <div class="column"><div class="column-label">P</div><div class="preference-box">6</div><div class="party-name">Citizens Party</div></div>
+      <div class="column"><div class="column-label">R</div><div class="preference-box">12</div><div class="party-name">The Greens</div></div>
+    </div>
+    <div class="below-line-bar">
+      Number at least 6 of these boxes <b>ABOVE THE LINE</b> in order of your choice. (with number 1 as your first choice).
+    </div>
+    <a href="https://australiansvstheagenda.com.au/shop" class="merch-button">🛍️ Merch</a>
+    <div class="authorisation">
+      Authorised by Anthony Khallouf for Australians vs. The Agenda, Hornsby NSW 2077
     </div>
   </div>
-
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyBGPbAEo67yxYKNQxs9odV5tMF5cQ1oYFs",
-      authDomain: "htv-card-tracker.firebaseapp.com",
-      databaseURL: "https://htv-card-tracker-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "htv-card-tracker",
-      storageBucket: "htv-card-tracker.appspot.com",
-      messagingSenderId: "413965742729",
-      appId: "1:413965742729:web:75a767735970f583ad4c58",
-      measurementId: "G-DEFYZX66VS"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-
-    const houseURL = 'https://anthonykhallouf.github.io/htv-project/house-preferences-2025-FINAL.json';
-    let houseData = {};
-
-    async function loadElectorates() {
-      try {
-        const res = await fetch(houseURL);
-        houseData = await res.json();
-        const dropdown = document.getElementById('electorate-select');
-        Object.keys(houseData).sort().forEach(electorate => {
-          const option = document.createElement('option');
-          option.value = electorate;
-          option.textContent = electorate;
-          dropdown.appendChild(option);
-        });
-      } catch (err) {
-        console.error("Error loading electorates:", err);
-      }
-    }
-
-    function trackDownloadAndDownloadPDF() {
-      const electorate = document.getElementById('electorate-select').value;
-      if (!electorate) {
-        alert("Please select an electorate.");
-        return;
-      }
-      const fileName = electorate.toLowerCase().replace(/\s+/g, '-') + '.pdf';
-      const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
-
-      // Track in Firebase
-      const ref = db.ref('downloads/' + electorate);
-      ref.transaction(current => (current || 0) + 1);
-
-      window.open(downloadURL, '_blank');
-    }
-
-    function startCountdown() {
-      const countdownElement = document.getElementById("countdownTimer");
-      const electionDate = new Date("2025-05-03T00:00:00+10:00");
-      function updateCountdown() {
-        const now = new Date();
-        const diff = electionDate - now;
-        if (diff <= 0) {
-          countdownElement.textContent = "🗳️ Election Day is here!";
-          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
-          return;
-        }
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-        countdownElement.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Election Day`;
-        setTimeout(updateCountdown, 1000);
-      }
-      updateCountdown();
-    }
-
-    loadElectorates();
-    startCountdown();
-  </script>
+</div>
 </body>
 </html>
