@@ -4,7 +4,6 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HTV Card Generator</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     body { background-color: black; color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; }
@@ -90,30 +89,15 @@
       }
     }
 
-    async function downloadPDF() {
+    function downloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
-      if (!electorate) return alert("Please select an electorate.");
-      const filename = electorate.toLowerCase().replace(/\s+/g, '') + ".html";
-      const url = `https://anthonykhallouf.github.io/htv-project/ballots/${filename}`;
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("Ballot not found.");
-        const html = await response.text();
-        const container = document.createElement('div');
-        container.innerHTML = html;
-        document.body.appendChild(container);
-        html2pdf().from(container).set({
-          margin: 0,
-          filename: `${electorate}-HTV-2025.pdf`,
-          html2canvas: { scale: 2, useCORS: true },
-          jsPDF: { format: 'a4', orientation: 'portrait' }
-        }).save().then(() => {
-          document.body.removeChild(container);
-        });
-      } catch (err) {
-        alert("Could not load ballot: " + err.message);
-        console.error(err);
+      if (!electorate) {
+        alert("Please select an electorate.");
+        return;
       }
+      const fileName = electorate.toLowerCase().replace(/\s+/g, '-') + '.pdf';
+      const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
+      window.open(downloadURL, '_blank');
     }
 
     function startCountdown() {
