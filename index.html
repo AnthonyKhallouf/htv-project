@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HTV Card Generator</title>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <style>
     html, body {
       background-color: black;
@@ -131,7 +133,7 @@
     <select id="electorate-select">
       <option value="">-- Select your electorate --</option>
     </select>
-    <button class="shine-button" onclick="downloadPDF()">📥 View & Download HTV Card (PDF)</button>
+    <button class="shine-button" onclick="trackDownloadAndDownloadPDF()">📥 View & Download HTV Card (PDF)</button>
     <div class="share-row">
       <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=Check+out+the+HTV+Card+Generator+by+%40ausvstheagenda+here:+https://htv.australiansvstheagenda.com.au', '_blank')">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share
@@ -146,6 +148,18 @@
   </div>
 
   <script>
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
     const houseURL = 'https://anthonykhallouf.github.io/htv-project/house-preferences-2025-FINAL.json';
     let houseData = {};
 
@@ -165,7 +179,7 @@
       }
     }
 
-    function downloadPDF() {
+    function trackDownloadAndDownloadPDF() {
       const electorate = document.getElementById('electorate-select').value;
       if (!electorate) {
         alert("Please select an electorate.");
@@ -173,6 +187,11 @@
       }
       const fileName = electorate.toLowerCase().replace(/\s+/g, '-') + '.pdf';
       const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
+
+      // Track in Firebase
+      const ref = db.ref('downloads/' + electorate);
+      ref.transaction(current => (current || 0) + 1);
+
       window.open(downloadURL, '_blank');
     }
 
