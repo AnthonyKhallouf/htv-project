@@ -97,16 +97,31 @@
       border-radius: 6px;
       text-align: center;
     }
-  </style>
+  
+    @media print {
+      html, body {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 794px;
+        height: 1122px;
+      }
+      .container {
+        margin: 60px auto !important;
+        page-break-inside: avoid !important;
+      }
+    }
+    </style>
+    
 </head>
 <body>
   <div class="container">
-    <div class="logo" style="margin-bottom: 5px;">
-      <img style="height: 90px;" src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG" alt="Australians vs The Agenda" />
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG" alt="Australians vs The Agenda" />
     </div>
     <div class="state">South Australia</div>
     <div class="division">Electoral Division of Adelaide</div>
-    <div class="instruction" style="margin-bottom: 30px;">Number the boxes from 1 to 7 in the order of your choice</div>
+    <div class="instruction">Number the boxes from 1 to 7 in the order of your choice</div>
 
     <div class="candidate-row"><div class="box">4</div><div class="details"><span class="name">PENGILLEY, Lionel</span><span class="party">Animal Justice Party</span></div></div>
     <div class="candidate-row"><div class="box">7</div><div class="details"><span class="name">GEORGANAS, Steve</span><span class="party">Australian Labor Party</span></div></div>
@@ -116,7 +131,7 @@
     <div class="candidate-row"><div class="box">1</div><div class="details"><span class="name">SIZE, Riley</span><span class="party">Pauline Hanson's One Nation</span></div></div>
     <div class="candidate-row"><div class="box">2</div><div class="details"><span class="name">GRANTHAM, Amy</span><span class="party">Liberal</span></div></div>
 
-    <div style="margin-top: 30px;" class="authorisation">
+    <div class="authorisation">
       Authorised by Anthony Khallouf for Australians vs. The Agenda, Hornsby NSW 2077
     </div>
   </div>
