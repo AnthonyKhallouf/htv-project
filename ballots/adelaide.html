@@ -24,6 +24,9 @@
       background: #e6f2e6;
       border: 4px solid black;
       box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .logo {
       text-align: center;
@@ -55,7 +58,7 @@
     .candidate-row {
       display: flex;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .box {
       width: 36px;
@@ -70,13 +73,24 @@
       font-weight: bold;
     }
     .details {
-      line-height: 1.2;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
     }
-    .details strong {
+    .details span {
+      display: inline;
+    }
+    .details .name {
+      font-weight: bold;
       font-size: 15px;
+      margin-bottom: 0;
+    }
+    .details .party {
+      font-size: 13px;
+      margin-top: -2px;
     }
     .authorisation {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 12px;
       background: white;
       padding: 8px;
@@ -87,22 +101,22 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG" alt="Australians vs The Agenda" />
+    <div class="logo" style="margin-bottom: 5px;">
+      <img style="height: 90px;" src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG" alt="Australians vs The Agenda" />
     </div>
     <div class="state">South Australia</div>
     <div class="division">Electoral Division of Adelaide</div>
-    <div class="instruction">Number the boxes from 1 to 7 in the order of your choice</div>
+    <div class="instruction" style="margin-bottom: 30px;">Number the boxes from 1 to 7 in the order of your choice</div>
 
-    <div class="candidate-row"><div class="box">4</div><div class="details"><strong>PENGILLEY, Lionel</strong><br/>Animal Justice Party</div></div>
-    <div class="candidate-row"><div class="box">7</div><div class="details"><strong>GEORGANAS, Steve</strong><br/>Australian Labor Party</div></div>
-    <div class="candidate-row"><div class="box">3</div><div class="details"><strong>MARKS, Steve</strong><br/>Trumpet of Patriots</div></div>
-    <div class="candidate-row"><div class="box">6</div><div class="details"><strong>MONTI, Mat</strong><br/>The Greens</div></div>
-    <div class="candidate-row"><div class="box">5</div><div class="details"><strong>McMILLAN, Matthew</strong><br/>FUSION | Planet Rescue | Whistleblower Protection | Innovation</div></div>
-    <div class="candidate-row"><div class="box">1</div><div class="details"><strong>SIZE, Riley</strong><br/>Pauline Hanson's One Nation</div></div>
-    <div class="candidate-row"><div class="box">2</div><div class="details"><strong>GRANTHAM, Amy</strong><br/>Liberal</div></div>
+    <div class="candidate-row"><div class="box">4</div><div class="details"><span class="name">PENGILLEY, Lionel</span><span class="party">Animal Justice Party</span></div></div>
+    <div class="candidate-row"><div class="box">7</div><div class="details"><span class="name">GEORGANAS, Steve</span><span class="party">Australian Labor Party</span></div></div>
+    <div class="candidate-row"><div class="box">3</div><div class="details"><span class="name">MARKS, Steve</span><span class="party">Trumpet of Patriots</span></div></div>
+    <div class="candidate-row"><div class="box">6</div><div class="details"><span class="name">MONTI, Mat</span><span class="party">The Greens</span></div></div>
+    <div class="candidate-row"><div class="box">5</div><div class="details"><span class="name">McMILLAN, Matthew</span><span class="party">FUSION | Planet Rescue | Whistleblower Protection | Innovation</span></div></div>
+    <div class="candidate-row"><div class="box">1</div><div class="details"><span class="name">SIZE, Riley</span><span class="party">Pauline Hanson's One Nation</span></div></div>
+    <div class="candidate-row"><div class="box">2</div><div class="details"><span class="name">GRANTHAM, Amy</span><span class="party">Liberal</span></div></div>
 
-    <div class="authorisation">
+    <div style="margin-top: 30px;" class="authorisation">
       Authorised by Anthony Khallouf for Australians vs. The Agenda, Hornsby NSW 2077
     </div>
   </div>
