@@ -103,6 +103,7 @@
       align-items: center;
       gap: 6px;
       box-shadow: 0 0 4px red;
+      text-decoration: none;
     }
     .share-btn img {
       width: 18px;
@@ -128,9 +129,15 @@
     </select>
     <button class="shine-button" onclick="downloadPDF()">📥 View & Download HTV Card (PDF)</button>
     <div class="share-row">
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share</button>
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share</button>
-      <button class="share-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share</button>
+      <a class="share-btn" target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhtv.australiansvstheagenda.com.au&text=Check%20out%20this%20How%20To%20Vote%20Card%20generator%20for%20the%202025%20Federal%20Election!">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share
+      </a>
+      <a class="share-btn" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhtv.australiansvstheagenda.com.au">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share
+      </a>
+      <a class="share-btn" target="_blank" href="https://t.me/share/url?url=https%3A%2F%2Fhtv.australiansvstheagenda.com.au&text=Check%20out%20this%20How%20To%20Vote%20Card%20generator!">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share
+      </a>
     </div>
   </div>
 
