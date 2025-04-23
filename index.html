@@ -15,7 +15,7 @@
       text-align: center;
       margin: 0;
       height: 100%;
-      overscroll-behavior-y: contain;
+      overscroll-behavior-y: auto;
     }
     body {
       display: flex;
@@ -85,9 +85,6 @@
     .shine-button.aec-button {
       box-shadow: 0 0 4px red;
     }
-    .shine-button.aec-button b {
-      text-decoration: none;
-    }
     .shine-button:hover {
       background: linear-gradient(to bottom, #bbb 0%, #222 100%);
       cursor: pointer;
@@ -96,25 +93,25 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 4px;
     }
     .share-btn {
       background: linear-gradient(to bottom, #222 0%, #000 100%);
       border: 2px solid red;
       color: white;
       border-radius: 9999px;
-      padding: 6px 14px;
-      font-size: 14px;
+      padding: 3px 8px;
+      font-size: 11px;
       font-weight: bold;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       box-shadow: 0 0 4px red;
       text-decoration: none;
     }
     .share-btn img {
-      width: 18px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
     }
     .merch-btn {
       border: 2px solid white !important;
@@ -126,25 +123,25 @@
       color: red;
       margin-top: 4px;
     }
+    a {
+      text-decoration: none;
+    }
     p { margin: 0; }
     .subtext {
       font-size: 13px;
-    }
-    a {
-      text-decoration: none !important;
     }
   </style>
 </head>
 <body>
   <div id="htv-generator">
-    <div class="donate-button" onclick="window.location.href='https://australiansvstheagenda.com.au/donate'">
+    <div class="donate-button" onclick="window.open('https://australiansvstheagenda.com.au/donate', '_blank')">
       ❤️ Donate to support @ausvstheagenda
     </div>
     <div class="countdown-timer" id="countdownTimer">⏳ Loading...</div>
     <h2>How to Vote in the 2025 Federal Election</h2>
     <p class="subtext">Click to find your electorate using the AEC:</p>
     <a href="https://electorate.aec.gov.au/" target="_blank">
-      <button class="shine-button aec-button">🔍 <b>Open AEC Electorate Finder</b></button>
+      <button class="shine-button aec-button" style="text-decoration: none;">🔍 Open AEC Electorate Finder</button>
     </a>
     <p class="subtext">Then select your electorate below:</p>
     <select id="electorate-select">
@@ -212,7 +209,7 @@
       const ref = db.ref('downloads/' + electorate);
       ref.transaction(current => (current || 0) + 1);
 
-      window.open(downloadURL, '_blank');
+      window.open(downloadURL, '_self');
     }
 
     function startCountdown() {
