@@ -4,39 +4,26 @@
   <meta charset="UTF-8">
   <title>Adelaide Ballot</title>
   <style>
-    @page {
-      size: A4;
-      margin: 0;
-    }
-    html, body {
+    body {
       background: black;
+      color: black;
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
     .ballot-wrapper {
       background: #e6f2e6;
-      width: 90%;
-      max-width: 800px;
-      padding: 20px 24px;
+      width: 800px;
+      margin: 40px auto;
+      padding: 20px 40px;
       border: 6px solid red;
       border-radius: 10px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
     }
     .logo {
       text-align: center;
     }
     .logo img {
-      max-width: 100%;
-      height: auto;
+      width: 420px;
       margin-bottom: 12px;
     }
     .state {
@@ -70,7 +57,6 @@
       align-items: center;
       justify-content: center;
       margin-right: 14px;
-      flex-shrink: 0;
     }
     .candidate {
       line-height: 1.2;
@@ -84,18 +70,6 @@
       text-align: center;
       border-radius: 4px;
     }
-
-    @media print {
-      html, body {
-        width: 210mm;
-        height: 297mm;
-      }
-      .ballot-wrapper {
-        width: 800px;
-        margin: auto;
-        page-break-inside: avoid;
-      }
-    }
   </style>
 </head>
 <body>
@@ -103,17 +77,65 @@
     <div class="logo">
       <img src="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/9b6d8cac1aa944d8c8ff3779bf19299daa735aa8/Untitled%20design.PNG" alt="Australians vs The Agenda">
     </div>
-    <div class="state">SOUTH AUSTRALIA</div>
-    <div class="electorate">ELECTORAL DIVISION OF ADELAIDE</div>
+    <div class="state" style="margin-bottom: 6px;">South Australia</div>
+    <div class="electorate">Electoral Division of Adelaide</div>
     <div class="instruction">Number the boxes from 1 to 7 in the order of your choice.</div>
 
-    <div class="preference"><div class="number">1</div><div class="candidate"><strong>SIZE, Riley</strong><br>Pauline Hanson's One Nation</div></div>
-    <div class="preference"><div class="number">2</div><div class="candidate"><strong>GRANTHAM, Amy</strong><br>Liberal</div></div>
-    <div class="preference"><div class="number">3</div><div class="candidate"><strong>MARKS, Steve</strong><br>Trumpet of Patriots</div></div>
-    <div class="preference"><div class="number">4</div><div class="candidate"><strong>PENGILLEY, Lionel</strong><br>Animal Justice Party</div></div>
-    <div class="preference"><div class="number">5</div><div class="candidate"><strong>McMILLAN, Matthew</strong><br>FUSION | Planet Rescue | Whistleblower Protection | Innovation</div></div>
-    <div class="preference"><div class="number">6</div><div class="candidate"><strong>MONTI, Mat</strong><br>The Greens</div></div>
-    <div class="preference"><div class="number">7</div><div class="candidate"><strong>GEORGANAS, Steve</strong><br>Australian Labor Party</div></div>
+    <div class="preference">
+      <div class="number">4</div>
+      <div class="candidate">
+        <strong>PENGILLEY, Lionel</strong><br>
+        Animal Justice Party
+      </div>
+    </div>
+
+    <div class="preference">
+      <div class="number">7</div>
+      <div class="candidate">
+        <strong>GEORGANAS, Steve</strong><br>
+        Australian Labor Party
+      </div>
+    </div>
+
+    <div class="preference">
+      <div class="number">3</div>
+      <div class="candidate">
+        <strong>MARKS, Steve</strong><br>
+        Trumpet of Patriots
+      </div>
+    </div>
+
+    <div class="preference">
+      <div class="number">6</div>
+      <div class="candidate">
+        <strong>MONTI, Mat</strong><br>
+        The Greens
+      </div>
+    </div>
+
+    <div class="preference">
+      <div class="number">5</div>
+      <div class="candidate">
+        <strong>McMILLAN, Matthew</strong><br>
+        FUSION | Planet Rescue | Whistleblower Protection | Innovation
+      </div>
+    </div>
+
+    <div class="preference">
+      <div class="number">1</div>
+      <div class="candidate">
+        <strong>SIZE, Riley</strong><br>
+        Pauline Hanson's One Nation
+      </div>
+    </div>
+
+    <div class="preference">
+      <div class="number">2</div>
+      <div class="candidate">
+        <strong>GRANTHAM, Amy</strong><br>
+        Liberal
+      </div>
+    </div>
 
     <div class="authorisation">
       Authorised by Anthony Khallouf for Australians vs. The Agenda, Hornsby NSW 2077
