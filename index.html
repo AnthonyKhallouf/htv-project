@@ -118,13 +118,9 @@
       border: 2px solid white !important;
       box-shadow: 0 0 6px white !important;
     }
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; }
     p { margin: 0; }
-    .subtext {
-      font-size: 13px;
-    }
+    .subtext { font-size: 13px; }
   </style>
 </head>
 <body>
@@ -201,7 +197,20 @@
       const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
 
       const ref = db.ref('downloads/' + electorate);
-      ref.transaction(current => (current || 0) + 1);
+      ref.transaction(current => (current || 0) + 1, (error, committed, snapshot) => {
+        if (error || !committed) return;
+
+        db.ref("downloads").once("value", (snapshot) => {
+          const data = snapshot.val();
+          let total = 0;
+          for (let key in data) {
+            if (key !== "total" && typeof data[key] === "number") {
+              total += data[key];
+            }
+          }
+          db.ref("downloads/total").set(total);
+        });
+      });
 
       window.open(downloadURL, '_self');
     }
