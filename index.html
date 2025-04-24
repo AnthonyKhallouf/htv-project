@@ -4,6 +4,12 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>HTV Card Generator</title>
+  <!-- Facebook OG Meta Tags -->
+  <meta property="og:title" content="HTV Card Generator" />
+  <meta property="og:description" content="Generate your personalised 'How to Vote' card for any electorate in Australia." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/refs/heads/main/Untitled%20design%20(1).png" />
+  <meta property="og:url" content="https://htv.australiansvstheagenda.com.au" />
+  <meta property="og:type" content="website" />
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
@@ -132,7 +138,7 @@
     <h2>How to Vote in the 2025 Federal Election</h2>
     <p class="subtext">Click to find your electorate using the AEC:</p>
     <a href="https://electorate.aec.gov.au/" target="_blank">
-      <button class="shine-button aec-button" style="text-decoration: none;">🔍 Open AEC Electorate Finder</button>
+      <button class="shine-button aec-button">🔍 Open AEC Electorate Finder</button>
     </a>
     <p class="subtext">Then select your electorate below:</p>
     <select id="electorate-select">
@@ -154,6 +160,7 @@
       </button>
     </div>
   </div>
+
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyBGPbAEo67yxYKNQxs9odV5tMF5cQ1oYFs",
@@ -197,9 +204,8 @@
       const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
 
       const ref = db.ref('downloads/' + electorate);
-      ref.transaction(current => (current || 0) + 1, (error, committed, snapshot) => {
+      ref.transaction(current => (current || 0) + 1, (error, committed) => {
         if (error || !committed) return;
-
         db.ref("downloads").once("value").then(snapshot => {
           const data = snapshot.val();
           let total = 0;
