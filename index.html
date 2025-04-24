@@ -85,7 +85,8 @@
     .shine-button.aec-button {
       box-shadow: 0 0 4px red;
     }
-    .shine-button:hover {
+    .shine-button:hover,
+    .share-btn:hover {
       background: linear-gradient(to bottom, #bbb 0%, #222 100%);
       cursor: pointer;
     }
@@ -100,28 +101,22 @@
       border: 2px solid red;
       color: white;
       border-radius: 9999px;
-      padding: 3px 8px;
-      font-size: 11px;
+      padding: 4px 8px;
+      font-size: 10px;
       font-weight: bold;
       display: flex;
       align-items: center;
       gap: 4px;
-      box-shadow: 0 0 4px red;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
       text-decoration: none;
     }
     .share-btn img {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
     }
     .merch-btn {
       border: 2px solid white !important;
       box-shadow: 0 0 6px white !important;
-    }
-    .disclaimer {
-      font-size: 12px;
-      font-style: italic;
-      color: red;
-      margin-top: 4px;
     }
     a {
       text-decoration: none;
@@ -162,7 +157,6 @@
         🛍️ Merch
       </button>
     </div>
-    <div class="disclaimer">NSW Senate has been fixed.</div>
   </div>
   <script>
     const firebaseConfig = {
