@@ -200,7 +200,7 @@
       ref.transaction(current => (current || 0) + 1, (error, committed, snapshot) => {
         if (error || !committed) return;
 
-        db.ref("downloads").once("value", (snapshot) => {
+        db.ref("downloads").once("value").then(snapshot => {
           const data = snapshot.val();
           let total = 0;
           for (let key in data) {
