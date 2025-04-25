@@ -159,6 +159,11 @@
         🛍️ Merch
       </button>
     </div>
+
+    <!-- 🔥 New display line for electorate count -->
+    <p style="color:white; font-size:13px; margin-top:10px;">
+      📍 Electorates downloaded: <span id="uniqueCountDisplay">0</span> / 150
+    </p>
   </div>
 
   <script>
@@ -241,6 +246,18 @@
       }
       updateCountdown();
     }
+
+    // 🔥 Live unique electorate count
+    firebase.database().ref("downloads").once("value").then(snapshot => {
+      const data = snapshot.val();
+      let unique = 0;
+      for (let key in data) {
+        if (key !== "total" && typeof data[key] === "number" && data[key] > 0) {
+          unique++;
+        }
+      }
+      document.getElementById("uniqueCountDisplay").innerText = unique;
+    });
 
     loadElectorates();
     startCountdown();
