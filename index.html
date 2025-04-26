@@ -145,6 +145,7 @@
       <option value="">-- Select your electorate --</option>
     </select>
     <button class="shine-button" onclick="trackDownloadAndDownloadPDF()">📥 View & Download HTV Card (PDF)</button>
+
     <div class="share-row">
       <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=Check+out+the+HTV+Card+Generator+by+%40ausvstheagenda+here:+https://htv.australiansvstheagenda.com.au', '_blank')">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share
@@ -206,16 +207,7 @@
       const ref = db.ref('downloads/' + electorate);
       ref.transaction(current => (current || 0) + 1, (error, committed) => {
         if (error || !committed) return;
-        db.ref("downloads").once("value").then(snapshot => {
-          const data = snapshot.val();
-          let total = 0;
-          for (let key in data) {
-            if (key !== "total" && typeof data[key] === "number") {
-              total += data[key];
-            }
-          }
-          db.ref("downloads/total").set(total);
-        });
+        db.ref('downloads/total').transaction(current => (current || 0) + 1);
       });
 
       window.open(downloadURL, '_self');
