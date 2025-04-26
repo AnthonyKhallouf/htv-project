@@ -127,6 +127,12 @@
     a { text-decoration: none; }
     p { margin: 0; }
     .subtext { font-size: 13px; }
+
+    /* 🔥 Dropdown Options FIX */
+    select option {
+      background-color: #1a1a1a;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -145,7 +151,6 @@
       <option value="">-- Select your electorate --</option>
     </select>
     <button class="shine-button" onclick="trackDownloadAndDownloadPDF()">📥 View & Download HTV Card (PDF)</button>
-
     <div class="share-row">
       <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=Check+out+the+HTV+Card+Generator+by+%40ausvstheagenda+here:+https://htv.australiansvstheagenda.com.au', '_blank')">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share
@@ -205,10 +210,7 @@
       const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
 
       const ref = db.ref('downloads/' + electorate);
-      ref.transaction(current => (current || 0) + 1, (error, committed) => {
-        if (error || !committed) return;
-        db.ref('downloads/total').transaction(current => (current || 0) + 1);
-      });
+      ref.transaction(current => (current || 0) + 1);
 
       window.open(downloadURL, '_self');
     }
