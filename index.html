@@ -4,18 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>HTV Card Generator</title>
-
-  <!-- Facebook OG Meta Tags -->
-  <meta property="og:title" content="HTV Card Generator" />
-  <meta property="og:description" content="Generate your personalised 'How to Vote' card for any electorate in Australia." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/AnthonyKhallouf/htv-project/refs/heads/main/Untitled%20design%20(1).png" />
-  <meta property="og:url" content="https://htv.australiansvstheagenda.com.au" />
-  <meta property="og:type" content="website" />
-
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-
   <style>
     html, body {
       background-color: black;
@@ -89,6 +80,7 @@
       width: 100%;
       box-shadow: 0 0 8px red;
       text-align: center;
+      text-align-last: center;
     }
     .shine-button.aec-button {
       box-shadow: 0 0 4px red;
@@ -126,30 +118,46 @@
       border: 2px solid white !important;
       box-shadow: 0 0 6px white !important;
     }
-    a { text-decoration: none; }
+    a {
+      text-decoration: none;
+    }
     p { margin: 0; }
-    .subtext { font-size: 13px; }
-    select option {
-      background-color: #1a1a1a;
-      color: white;
+    .subtext {
+      font-size: 13px;
     }
   </style>
 </head>
-
 <body>
   <div id="htv-generator">
+    <div class="donate-button" onclick="window.open('https://australiansvstheagenda.com.au/donate', '_blank')">
+      ❤️ Donate to support @ausvstheagenda
+    </div>
+    <div class="countdown-timer" id="countdownTimer">⏳ Loading...</div>
     <h2>How to Vote in the 2025 Federal Election</h2>
     <p class="subtext">Click to find your electorate using the AEC:</p>
     <a href="https://electorate.aec.gov.au/" target="_blank">
-      <button class="shine-button">🔍 Open AEC Electorate Finder</button>
+      <button class="shine-button aec-button" style="text-decoration: none;">🔍 Open AEC Electorate Finder</button>
     </a>
     <p class="subtext">Then select your electorate below:</p>
     <select id="electorate-select">
       <option value="">-- Select your electorate --</option>
     </select>
     <button class="shine-button" onclick="trackDownloadAndDownloadPDF()">📥 View & Download HTV Card (PDF)</button>
+    <div class="share-row">
+      <button class="share-btn" onclick="window.open('https://twitter.com/intent/tweet?text=Check+out+the+HTV+Card+Generator+by+%40ausvstheagenda+here:+https://htv.australiansvstheagenda.com.au', '_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" />Share
+      </button>
+      <button class="share-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://htv.australiansvstheagenda.com.au', '_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />Share
+      </button>
+      <button class="share-btn" onclick="window.open('https://t.me/share/url?url=https://htv.australiansvstheagenda.com.au&text=Check+out+the+HTV+Card+Generator+by+%40ausvstheagenda', '_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" />Share
+      </button>
+      <button class="share-btn merch-btn" onclick="window.open('https://australiansvstheagenda.com.au/shop', '_blank')">
+        🛍️ Merch
+      </button>
+    </div>
   </div>
-
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyBGPbAEo67yxYKNQxs9odV5tMF5cQ1oYFs",
@@ -162,8 +170,8 @@
       measurementId: "G-DEFYZX66VS"
     };
     firebase.initializeApp(firebaseConfig);
-
     const db = firebase.database();
+
     const houseURL = 'https://anthonykhallouf.github.io/htv-project/house-preferences-2025-FINAL.json';
     let houseData = {};
 
@@ -189,23 +197,38 @@
         alert("Please select an electorate.");
         return;
       }
-
       const fileName = electorate.toLowerCase().replace(/\s+/g, '-') + '.pdf';
       const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
 
-      // Increment download count for the selected electorate
-      const electorateRef = db.ref('downloads/' + electorate);
-      electorateRef.transaction(current => (current || 0) + 1);
+      const ref = db.ref('downloads/' + electorate);
+      ref.transaction(current => (current || 0) + 1);
 
-      // Increment total download count
-      const totalRef = db.ref('downloads/total');
-      totalRef.transaction(current => (current || 0) + 1);
-
-      // Trigger download of PDF
       window.open(downloadURL, '_self');
     }
 
+    function startCountdown() {
+      const countdownElement = document.getElementById("countdownTimer");
+      const electionDate = new Date("2025-05-03T00:00:00+10:00");
+      function updateCountdown() {
+        const now = new Date();
+        const diff = electionDate - now;
+        if (diff <= 0) {
+          countdownElement.textContent = "🗳️ Election Day is here!";
+          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        countdownElement.textContent = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until Election Day`;
+        setTimeout(updateCountdown, 1000);
+      }
+      updateCountdown();
+    }
+
     loadElectorates();
+    startCountdown();
   </script>
 </body>
 </html>
