@@ -213,14 +213,14 @@
       const downloadURL = `https://anthonykhallouf.github.io/htv-project/${fileName}`;
 
       // Increment download count for the selected electorate
-      const ref = db.ref('downloads/' + electorate);
-      ref.transaction(current => (current || 0) + 1);
+      const electorateRef = db.ref('downloads/' + electorate);
+      electorateRef.transaction(current => (current || 0) + 1);
 
       // Increment total download count
       const totalRef = db.ref('downloads/total');
       totalRef.transaction(current => (current || 0) + 1);
 
-      // Trigger download of PDF
+      // Trigger PDF download
       window.open(downloadURL, '_self');
     }
 
